@@ -1,0 +1,14 @@
+{% extends "patient/patient_base.html" %}
+{% load static %}
+{%block content %}
+
+<div>
+    {% for i in report reversed%}
+    {{i.0}} {{i.1}}<a href="https://ipfs.infura.io/ipfs/{{i.2}}" class="btn btn-info" target="_blank">View Report</a>
+    <br>
+    {% endfor %}
+</div>
+
+
+
+{% endblock content %}

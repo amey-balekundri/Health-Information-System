@@ -1,0 +1,35 @@
+{% extends "patient/patient_base.html" %}
+{% load static %}
+{%block content %}
+
+<br>
+<br>
+<div class="row row-cols-1 row-cols-md-6">
+{% for doc in doctors %}
+  <div class="col mb-4">
+  <form method="POST" action="{% url 'revoke_access' %}" enctype="multipart/form-data">
+    {% csrf_token %}
+  <div class="card">
+    <img src="/media/{{doc.image}}" class="card-img-top" alt="..." >
+    <div class="card-body">
+      <h5 class="card-title">{{doc.first_name}} {{doc.middle_name}} {{doc.last_name}}</h5>
+      <p class="card-text">{{doc.email_id}}</p>
+      <input type="hidden" name="email_id" id="email" value="{{doc.email_id}}">
+      <p class="card-text">{{doc.phone_number}}</p>
+      <input type="submit" class="btn btn-primary" value="Revoke Access">
+    </div>
+  </div>
+  </form>
+  </div>  
+{% endfor %}
+</div>
+
+
+<br>
+<br>
+
+
+
+
+
+{% endblock content %}

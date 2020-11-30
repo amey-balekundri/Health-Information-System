@@ -36,3 +36,10 @@ def login_request(request):
 def logout_view(request):
     logout(request)
     return render(request,'main/logout.html')
+
+def dashboard_redirect(request):
+    user_type=User.user_type(request.user)
+    if user_type=='patient':
+        return redirect('patient_dashboard')
+    if user_type=='doctor':
+        return redirect('doctor_dashboard')

@@ -1,0 +1,28 @@
+{% extends "patient/patient_base.html" %}
+{% load static %}
+{%block content %}
+
+<br>
+<br>
+<div class="col-md-5">
+    <input id="search_here" class="form-control mb-3" placeholder="type here to search.." />
+    </div>
+    
+    <div id="result">
+    <form method="POST" action="{% url 'grant_access' %}" enctype="multipart/form-data">
+        {% csrf_token %}
+    <div class="card" style="width: 18rem;">
+      <img src="" class="card-img-top" alt="..." id="img"></img>
+      <div class="card-body">
+        <h5 class="card-title" id='name'></h5>
+        <p id='email_id' class="card-text"></p>
+        <input type="hidden" name="email_id" id="email_id2">
+        <p id='phone_no' class="card-text"></p>
+        <input type="submit" class="btn btn-primary" value="Grant Access">
+      </div>
+    </div>
+    </form>
+    </div>
+    <div id='not_found'></div>
+
+{% endblock content %}

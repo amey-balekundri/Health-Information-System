@@ -1,9 +1,16 @@
-{% extends "main/base.html" %}
+{% extends "patient/patient_base.html" %}
+{% load static %}
 {%block content %}
 <div>
+    
+    <br>
     <h1>Patient Dashboard</h1>
-    {% for objects in patient %}
-    {{objects.email}}
-{% endfor %}
+    <br>
+    <br>
+    <br>
+    Total Reports : {{totalreports}}
+    <br>
+    Doctors Having Access : {{doctor_access}}
+
 </div>
 {% endblock content %}

@@ -1,9 +1,11 @@
-{% extends "main/base.html" %}
+{% extends "doctor/doctor_base.html" %}
 {%block content %}
 <div>
     <h1>Doctor Dashboard</h1>
-    {% for objects in doctor %}
-        {{objects.email}}
-    {% endfor %}
+    <br>
+    <br>
+
+    Total patient Access:{{patient_access}}
 </div>
+
 {% endblock content %}

@@ -8,7 +8,8 @@ class DoctorRegisterForm(ModelForm):
     first_name = forms.CharField(required=True)
     last_name = forms.CharField(required=True)
     middle_name = forms.CharField(required=True)
-    phone_number = forms.CharField(required=True)
+    phone_number = forms.IntegerField(required=True)
+    aadhaar_no=forms.IntegerField(required=True)
     class Meta:
         model= Doctor
-        fields=('first_name','middle_name','last_name','phone_number')
+        fields=('first_name','middle_name','last_name','phone_number','aadhaar_no')

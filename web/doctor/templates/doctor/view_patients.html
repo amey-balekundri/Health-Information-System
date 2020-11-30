@@ -1,0 +1,30 @@
+{% extends "doctor/doctor_base.html" %}
+{%block content %}
+
+
+<br>
+<br>
+
+<div class="row row-cols-1 row-cols-md-6">
+    {% for i in patients %}
+      <div class="col mb-4">
+      <div class="card">
+        <img src="/media/{{i.image}}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">{{i.first_name}} {{i.middle_name}} {{i.last_name}}</h5>
+          <p class="card-text">{{i.email_id}}</p>
+          <p class="card-text">{{i.phone_number}}</p>
+          <form class="form-inline" method='post' action='{% url "show_reports" %}' enctype="multipart/form-data" id="show_reports">
+            {% csrf_token %}
+            <input type="hidden" name="patient" id="patient" value="{{i.email_id}}">
+          <input type="submit" class="btn btn-primary" value="View Report">
+          </form>
+        </div>
+      </div>
+      </div>  
+    {% endfor %}
+    </div>
+
+
+
+{% endblock content %}

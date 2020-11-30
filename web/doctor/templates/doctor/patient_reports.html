@@ -1,0 +1,41 @@
+{% extends "doctor/doctor_base.html" %}
+{%block content %}
+
+
+<br>
+<br>
+<form class="form-inline" method='post' action='{% url "show_reports" %}' enctype="multipart/form-data" id="show_reports">
+    {% csrf_token %}
+    <div class="form-group mb-2">
+        <label for='patient'>Select Patient:</label>
+    </div>
+    <div class="form-group mx-sm-3 mb-2">
+        <select class="form-control " name="patient" id='patient'>
+            <option value=""></option>
+            {% for i in patients %}
+                <option value="{{i.email_id}}">{{i.first_name}} {{i.middle_name}} {{i.last_name}} ({{i.email_id}})</option>
+            {% endfor %}
+        </select>
+    </div>
+    <input type="submit" class="btn btn-primary mb-2" value="Show">
+</form>
+<script>$('#patient').val("{{val}}").prop('selected',true);</script>
+
+
+<br>
+<br>
+
+<div>
+    {% for i in report reversed %}
+    {{i.0}} {{i.1}}<a href="https://ipfs.infura.io/ipfs/{{i.2}}" class="btn btn-info" target="_blank">View Report</a>
+    <br>
+    {% endfor %}
+</div>
+
+<p id='result'></p>
+
+
+
+
+
+{% endblock content %}

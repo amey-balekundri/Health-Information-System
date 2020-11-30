@@ -1,0 +1,22 @@
+{% extends "patient/patient_base.html" %}
+{% load static %}
+{%block content %}
+
+
+<img class="rounded-circle " src="{{user.patient.image.url}}" height="125px" width="125px">
+<br>
+
+
+{{patient.first_name}}
+<br>
+{{patient.middle_name}}
+<br>
+{{patient.last_name}}
+<br>
+{{patient.aadhaar_no}}
+<br>
+{{patient.email_id}}
+<br>
+{{patient.phone_number}}
+<br>
+{% endblock content %}
