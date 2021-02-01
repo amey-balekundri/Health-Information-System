@@ -7,9 +7,9 @@ from patient.models import Patient
 from doctor.models import Doctor
 from django.contrib.auth import login, logout,authenticate
 from django.contrib.auth.decorators import login_required
-import blockchain
-import contracts
-import files
+from blockchain import blockchain   
+from blockchain import contracts
+from utils import files
 import datetime
 
 def create_patient(request):

@@ -2,7 +2,7 @@
 url=''  
 
 #Ipfs
-ipfs='/dns/ipfs.infura.io/tcp/5001/https'
+ipfs=''
 
 #Deployed Contract Address
 contract_address=''
@@ -14,4 +14,10 @@ main_account=''
 main_account_key=''
 
 #To encrpyt private key of account 
-key='project'
+key=''
+
+
+#database
+DATABASES = {
+    
+}

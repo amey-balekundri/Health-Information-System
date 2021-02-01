@@ -1,4 +1,4 @@
-import blockchain
+from blockchain import blockchain
 
 web3,chain_id=blockchain.connect_blockchain()
 contract=blockchain.load_contract()

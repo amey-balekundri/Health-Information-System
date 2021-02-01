@@ -10,7 +10,7 @@ def connect_blockchain():
     return (web3, chain_id)
 
 def load_contract():
-    with open('abi.json') as f:
+    with open('blockchain/abi.json') as f:
         abi = json.load(f)
     contract = web3.eth.contract(address=config.contract_address, abi=abi)
     return(contract)

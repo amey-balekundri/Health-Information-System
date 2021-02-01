@@ -7,8 +7,8 @@ from doctor.models import Doctor
 from django.contrib.auth import login, logout,authenticate
 from django.contrib.auth.decorators import login_required
 from patient.models import Patient
-import blockchain
-import contracts
+from blockchain import blockchain
+from blockchain import contracts
 import datetime
 
 # Create your views here.
