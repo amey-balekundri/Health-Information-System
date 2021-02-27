@@ -11,6 +11,9 @@ from blockchain import blockchain
 from blockchain import contracts
 from utils import files
 import datetime
+from dateutil import tz
+from main.models import User
+from django.db.models import Q
 
 def create_patient(request):
     if request.method == 'POST':
@@ -43,7 +46,18 @@ def create_patient(request):
         {'user_form': user_form, 'patient_form': patient_form}
     )
 
+
+def patient_required(function):
+    def decorator(request,*args,**kwargs):
+        patient=User.patient_role(request.user)
+        if patient=='True':
+            return function(request,*args,**kwargs)
+        else:
+            return redirect('dashboard_redirect')
+    return decorator
+
 @login_required
+@patient_required
 def dashboard(request):
     user=request.user
     patient=Patient.objects.filter(email=user).values()[0]
@@ -51,9 +65,11 @@ def dashboard(request):
     patientInfo=contracts.patientInfo(patient_account)
     totalreports=len(patientInfo[1])
     doctor_access=len(patientInfo[2])
+    blockchain.check_for_sufficient_balance(patient_account.address)
     return render(request, 'patient/dashboard.html',{'totalreports':totalreports,'doctor_access':doctor_access})
 
 @login_required
+@patient_required
 def view_reports(request):
     user=request.user
     patient=Patient.objects.filter(email=user).values()[0]
@@ -61,10 +77,11 @@ def view_reports(request):
     report=contracts.viewReport(patient_account)
     for i in range(len(report)):
         report[i]=list(report[i])
-        report[i][0]=(datetime.datetime.fromtimestamp(int(report[i][0])).strftime('%d/%m/%Y %I:%M %p'))
+        report[i][0]=(datetime.datetime.fromtimestamp(int(report[i][0]), tz.gettz('Asia/Kolkata')).strftime('%d/%m/%Y %I:%M %p'))
     return render(request, 'patient/view_report.html',{'report':report})
 
 @login_required
+@patient_required
 def upload_report(request):
     if request.method == 'POST':
         user=request.user
@@ -78,6 +95,7 @@ def upload_report(request):
     return render(request,'patient/upload_report.html')
 
 @login_required
+@patient_required
 def revoke_doctor(request):
     user=request.user
     patient=Patient.objects.filter(email=user).values()[0]
@@ -91,13 +109,16 @@ def revoke_doctor(request):
     return render(request,'patient/revoke_doctor.html',{'doctors':doctors})
 
 @login_required
+@patient_required
 def access_doctor(request):
     return render(request,'patient/access_doctor.html')
 
 def search_doctor(request):
     search_value=request.GET.get('doctor')
-    doctor=Doctor.objects.filter(email=search_value).values()[0]
-    #data={'doctor':doctor}
+    if search_value.isdigit():
+        doctor=Doctor.objects.filter(Q(aadhaar_no=search_value) | Q(phone_number=search_value)).values()[0]
+    else:
+        doctor=Doctor.objects.filter(Q(email=search_value)).values()[0]
     return JsonResponse(doctor)
 
 
@@ -121,6 +142,7 @@ def revoke_access(request):
         return redirect('patient_dashboard')
 
 @login_required
+@patient_required
 def patient_profile(request):
     patient=Patient.objects.filter(email=request.user).values()[0]
     return render(request,'patient/profile.html',{'patient':patient})

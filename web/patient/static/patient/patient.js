@@ -4,8 +4,8 @@ $(document).ready(function(){
   $('#reportimg').hide()
   $('#reportpdf').hide()
 
-  $("#search_here").keyup(function(){
-    var doctor=$(this).val();
+  $("#search_here").click(function(){
+    var doctor=$("#search_value").val();
     $.ajax({
         type:"GET",
         url: "access_doctor/search_doctor/",
@@ -25,6 +25,10 @@ $(document).ready(function(){
           $('#not_found').text('No doctor found')
         }
     });
+})
+
+$("#search_value").keyup(function(){
+  $('#result').hide()
 })
 
 

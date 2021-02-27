@@ -57,5 +57,17 @@ class User(AbstractBaseUser):
             return "doctor"
         if self.is_patient==True:
             return "patient"
+
+    def patient_role(self):
+        if self.is_patient:
+            return "True"
+        else:
+            return "False"
+
+    def doctor_role(self):
+        if self.is_doctor:
+            return "True"
+        else:
+            return "False"
 	
 		

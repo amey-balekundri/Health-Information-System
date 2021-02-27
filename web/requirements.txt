@@ -5,8 +5,10 @@ bitarray==1.2.2
 certifi==2020.11.8
 chardet==3.0.4
 cytoolz==0.11.0
-Django==3.1.3
+Django==3.1.7
 django-crispy-forms==1.10.0
+djongo==1.3.4
+dnspython==2.1.0
 eth-abi==2.1.1
 eth-account==0.5.4
 eth-hash==0.2.0
@@ -26,12 +28,14 @@ parsimonious==0.8.1
 Pillow==8.0.1
 protobuf==3.14.0
 pycryptodome==3.9.9
+pymongo==3.11.3
 pyrsistent==0.17.3
+python-dateutil==2.8.1
 pytz==2020.4
 requests==2.25.0
 rlp==2.0.1
 six==1.15.0
-sqlparse==0.4.1
+sqlparse==0.2.4
 toolz==0.11.1
 urllib3==1.26.2
 varint==1.0.2

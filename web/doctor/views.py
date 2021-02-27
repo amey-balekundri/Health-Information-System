@@ -10,7 +10,8 @@ from patient.models import Patient
 from blockchain import blockchain
 from blockchain import contracts
 import datetime
-
+from dateutil import tz
+from main.models import User
 # Create your views here.
 
 
@@ -46,7 +47,17 @@ def create_doctor(request):
         {'user_form': user_form, 'doctor_form':doctor_form}
     )
 
+def doctor_required(function):
+    def decorator(request,*args,**kwargs):
+        doctor=User.doctor_role(request.user)
+        if doctor=='True':
+            return function(request,*args,**kwargs)
+        else:
+            return redirect('dashboard_redirect')
+    return decorator
+
 @login_required
+@doctor_required
 def dashboard(request):
     doctor=Doctor.objects.filter(email=request.user).values()[0]
     doctor_account=blockchain.load_account(doctor['privatekey'])
@@ -55,6 +66,7 @@ def dashboard(request):
     return render(request, 'doctor/dashboard.html',{'patient_access':patient_access})
 
 @login_required
+@doctor_required
 def view_patients(request):
     doctor=Doctor.objects.filter(email=request.user).values()[0]
     doctor_account=blockchain.load_account(doctor['privatekey'])
@@ -65,6 +77,7 @@ def view_patients(request):
     return render(request,'doctor/view_patients.html',{'patients':patients})
         
 @login_required
+@doctor_required
 def patient_reports(request):
     doctor=Doctor.objects.filter(email=request.user).values()[0]
     doctor_account=blockchain.load_account(doctor['privatekey'])
@@ -76,6 +89,7 @@ def patient_reports(request):
     return render(request,'doctor/patient_reports.html',{'patients':patients,'report':report})
 
 @login_required
+@doctor_required
 def show_reports(request):
     patient=Patient.objects.filter(email=request.POST['patient']).values()[0]
     doctor=Doctor.objects.filter(email=request.user).values()[0]
@@ -88,10 +102,11 @@ def show_reports(request):
         patients.append(Patient.objects.filter(address=i).values()[0])
     for i in range(len(report)):
         report[i]=list(report[i])
-        report[i][0]=(datetime.datetime.fromtimestamp(int(report[i][0])).strftime('%d/%m/%Y %I:%M %p'))
+        report[i][0]=(datetime.datetime.fromtimestamp(int(report[i][0]), tz.gettz('Asia/Kolkata')).strftime('%d/%m/%Y %I:%M %p'))
     return render(request,'doctor/patient_reports.html',{'patients':patients,'report':report,'val':val})
 
 @login_required
+@doctor_required
 def doctor_profile(request):
     doctor=Doctor.objects.filter(email=request.user).values()[0]
     return render(request,'doctor/profile.html',{'doctor':doctor})

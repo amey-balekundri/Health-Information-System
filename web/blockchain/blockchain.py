@@ -25,7 +25,7 @@ def create_account():
 
 def account_balance(address):
     bal=web3.eth.getBalance(address)
-    balance=web3.fromWei(balance,'ether')
+    balance=web3.fromWei(bal,'ether')
     return(balance)
 
 def decrpyt(key):
@@ -42,7 +42,7 @@ def send_ether(address):
     trxn={
         'nonce':web3.eth.getTransactionCount(account.address),
         'gas':700000,
-        'gasPrice':web3.toWei('10','gwei'),
+        'gasPrice':web3.toWei('100','gwei'),
         'to':address,
         'value':500000000000000000,
     }
@@ -51,4 +51,11 @@ def send_ether(address):
 
 def is_mined(txn_hash):
     web3.eth.waitForTransactionReceipt(txn_hash)
+
+def check_for_sufficient_balance(address):
+    balance=account_balance(address)
+    if(balance<0.2):
+        send_ether(address)
+    else:
+        pass
 
