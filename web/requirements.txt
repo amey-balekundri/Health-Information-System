@@ -23,6 +23,7 @@ ipfshttpclient==0.7.0a1
 jsonschema==3.2.0
 lru-dict==1.1.6
 multiaddr==0.0.9
+mysqlclient==2.0.3
 netaddr==0.8.0
 parsimonious==0.8.1
 Pillow==8.0.1
