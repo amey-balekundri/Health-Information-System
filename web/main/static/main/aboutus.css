@@ -1,0 +1,107 @@
+.image1{
+	height: 30vw;
+
+	margin-left: 58vw;
+
+	margin-top: -25vw;
+
+}
+
+.motto{
+	font-size: 3em;
+	font-style: italic;
+
+	margin-top: 4vw;
+	margin-left: 20vw;
+}
+
+.p1{
+	font-size: 2em;
+
+	margin-top: 6vw;
+	margin-right: 40vw;
+	margin-left: 1vw;
+}	
+
+
+
+/* --- Media Queries --- */
+
+@media screen and (min-width: 481px) and (max-width:768px){	
+
+	.image1{
+	height: 30vw;
+
+	margin-left: 58vw;
+
+	margin-top: -45vw;
+
+}
+
+.motto{
+	font-size: 2em;
+	font-style: italic;
+
+	margin-top: 4vw;
+	margin-left: 20vw;
+}
+
+.p1{
+	font-size: 1.4em;
+
+	margin-top: 6vw;
+	margin-right: 40vw;
+	margin-left: 1vw;
+}	
+
+}
+
+/* ---  --- */
+
+@media screen and (min-width: 769px) and (max-width:1024px){
+
+	.image1{
+	height: 30vw;
+
+	margin-left: 58vw;
+
+	margin-top: -40vw;
+
+}
+
+.motto{
+	font-size: 2em;
+	font-style: italic;
+
+	margin-top: 4vw;
+	margin-left: 20vw;
+}
+
+.p1{
+	font-size: 1.6em;
+
+	margin-top: 6vw;
+	margin-right: 40vw;
+	margin-left: 1vw;
+}	
+
+}
+
+/* ---  --- */
+
+@media screen and (min-width: 1025px) and (max-width: 1200px){
+
+	.image1{
+	height: 30vw;
+
+	margin-left: 58vw;
+
+	margin-top: -35vw;
+
+}
+
+
+}
+
+
+/* --- End of Media Queries --- */

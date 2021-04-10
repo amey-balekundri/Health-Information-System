@@ -2,26 +2,45 @@
 {% load static %}
 {%block content %}
 
-<br>
-<br>
-<div class="col-md-5">
-    <input id="search_value" class="form-control mb-3" placeholder="type here to search.." />
-    <input id="search_here" type="submit" class="btn btn-primary" value="Search">
-    </div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Yinka Enoch Adedokun">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     
+    <link href="{% static 'patient/access_doctor.css' %}" rel="stylesheet">
+    
+</head>
+
+
+<body style="background-color: OldLace">
+<br>
+<h1> Search Doctor Here </h1>
+
+<br>
+<br>
+<br>
+
+
+<div class="col-md-5">
+    <input id="search_value" class="form-control mb-3" placeholder="type doctor's email here to search..." /> <br>
+    <input id="search_here" type="submit" class="btn btn-primary" value="Search">
+</div>
+    <br>
     <div id="result">
     <form method="POST" action="{% url 'grant_access' %}" enctype="multipart/form-data">
         {% csrf_token %}
-    <div class="card" style="width: 18rem;">
+    <div class="card">
       <img src="" class="card-img-top" alt="..." id="img"></img>
       <div class="card-body">
-        <h5 class="card-title" id='name'></h5>
-        <p id='email_id' class="card-text"></p>
+        <p style="font-weight: bold;">Full Name: </p> <h5 class="card-title" id='name'></h5>
+        <p style="font-weight: bold;">Email: </p><p id='email_id' class="card-text"></p>
         <input type="hidden" name="email_id" id="email_id2">
-        <p id='phone_no' class="card-text"></p>
-        <input type="submit" class="btn btn-primary" value="Grant Access">
+        <p style="font-weight: bold;">Phone Number: </p> <p id='phone_no' class="card-text"></p>
+        <input type="submit" class="btn1" value="Grant Access">
       </div>
     </div>
+    <br><br>
     </form>
     </div>
     <div id='not_found'></div>

@@ -1,0 +1,162 @@
+
+h1{
+    text-align: center;
+    font-weight: bold;
+}
+
+.basic_form{
+    background-color: OldLace;
+
+    border-top-right-radius:20px;
+    border-bottom-right-radius:20px;
+    border-top-left-radius:20px;
+    border-bottom-left-radius:20px;
+
+    border-top:2px solid black;
+    border-right:2px solid black;
+    border-left:2px solid black;
+    border-bottom:2px solid black;
+
+    padding-left: 10vw;
+    padding-top: 2vw;
+}
+
+form{
+    padding-left: 0vw;
+    padding-top: 2vw;
+
+    margin-left: 8vw;
+    margin-right: 10vw;
+    margin-top: 0vw; 
+
+}
+
+
+label{
+    font-weight: bold;
+}
+
+
+#id_height,#id_weight,#id_blood_group,#id_allergies,#id_operations{
+    border: 0;
+    background: none;
+    display: block;
+    border: 2px solid #3498db;
+    width: 44vw;
+    outline: none;
+    color: black;
+    border-radius: 28px;
+    transition: 1.5s
+}
+#id_height:focus,#id_weight:focus,#id_blood_group:focus,#id_allergies:focus,#id_operations:focus{
+    border-bottom-color: green;
+    box-shadow: 0 0 5px rgba(0,80,80,.4); 
+    border-radius: 4px;
+
+
+}
+
+
+.btn{
+    text-align: center;
+    padding-left: 12vw;
+    padding-right: 12vw;
+
+    margin-left: 8vw;
+    margin-top: 2vw;
+    margin-bottom: 1vw;
+}
+
+
+/* --- Media Queries --- */
+
+@media screen and (min-width: 481px) and (max-width:768px){ 
+
+
+.basic_form{
+
+    padding-left: 6vw;
+    padding-top: 2vw;
+}
+
+form{
+    padding-left: 0vw;
+    padding-top: 2vw;
+
+    margin-left: 8vw;
+    margin-right: 10vw;
+    margin-top: 2vw; 
+
+}
+#id_height,#id_weight,#id_blood_group,#id_allergies,#id_operations{
+
+    width: 60vw;
+    
+}
+
+.btn{
+    text-align: center;
+    padding-left: 12vw;
+    padding-right: 12vw;
+
+    margin-left: 14vw;
+    margin-top: 2vw;
+    margin-bottom: 1vw;
+}
+
+}
+
+/* ---  --- */
+
+@media screen and (min-width: 769px) and (max-width:1024px){
+
+.basic_form{
+
+    padding-left: 4vw;
+    padding-top: 2vw;
+}
+
+form{
+    padding-left: 0vw;
+    padding-top: 2vw;
+
+    margin-left: 2vw;
+    margin-right: 10vw;
+    margin-top: 0vw; 
+
+}
+#id_height,#id_weight,#id_blood_group,#id_allergies,#id_operations{
+
+    width: 42vw;
+    
+}
+
+.btn{
+    text-align: center;
+    padding-left: 8vw;
+    padding-right: 8vw;
+
+    margin-left: 12vw;
+    margin-top: 2vw;
+    margin-bottom: 1vw;
+}
+
+
+}
+
+/* ---  --- */
+
+@media screen and (min-width: 1025px) and (max-width: 1300px){
+
+
+form{
+    padding-left: 0vw;
+   
+    margin-right: 5vw;
+
+}
+
+}
+
+
+/* --- End of Media Queries --- */

@@ -1,0 +1,151 @@
+.main-content{
+	opacity: 0.85;
+	width: 55%;
+	border-radius: 20px;
+	box-shadow: 0 5px 5px rgba(0,0,0,.4);
+	margin-left: 20vw;
+	margin-right: 20vw;
+	margin-top: 6vw;
+	margin-bottom: 6vw;
+	display: flex;
+}
+.company__info{
+	background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
+	border-top-left-radius: 20px;
+	border-bottom-left-radius: 20px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	color: #fff;
+}
+
+fieldset{
+	margin-left: -3vw;
+}
+
+
+.row > h2{
+	color:#008080;
+	padding-left: 13vw;
+}
+.login_form{
+	background-color: white;
+	border-top-right-radius:20px;
+	border-bottom-right-radius:20px;
+	border-top:1px solid #ccc;
+	border-right:1px solid #ccc;
+}
+
+form{
+	padding: 0vw 8.5vw;
+}
+
+
+#id_username,#id_password{
+	border: 0;
+    background: none;
+    display: block;
+    margin: 1.5vw auto;
+    text-align: center;
+    border: 2px solid #3498db;
+    padding: 1vw 1vw;
+    width: 22vw;
+    outline: none;
+    color: black;
+    border-radius: 24px;
+    transition: 1.5s
+}
+#id_username:focus,#id_password:focus{
+	border-bottom-color: green;
+	box-shadow: 0 0 5px rgba(0,80,80,.4); 
+	border-radius: 4px;
+}
+
+
+label{
+	margin-left:-1vw;
+	font-size: 18px;
+}
+
+
+.btn{
+	transition: all .5s ease;
+	width: 13vw;
+	border-radius: 30px;
+	color:#008080;
+	font-weight: bold;
+	background-color: #fff;
+	border: 1px solid #008080;
+	margin-top: 1vw;
+	margin-bottom: 1vw;
+	margin-left:-4vw;
+}
+.btn:hover, .btn:focus{
+	background-color: #008080;
+	color:#fff;
+}
+
+
+/* --- Media Queries --- */
+
+@media screen and (min-width: 481px) and (max-width:768px){	
+
+	.main-content{
+	width: 65%;
+
+	margin-left: 12vw;
+	margin-right: 20vw;
+	margin-top: 6vw;
+	margin-bottom: 6vw;
+	display: flex;
+}
+
+.company__info{
+	display: none;
+}
+
+#id_username,#id_password{
+    width: 45vw;   
+}
+
+.login_form{
+	background-color: white;
+	border-top-left-radius:20px;
+	border-bottom-left-radius:20px;
+	border-top:1px solid #ccc;
+	border-right:1px solid #ccc;
+}
+
+.row > h2{
+	padding-left: 22vw;
+}
+
+
+}
+
+/* ---  --- */
+
+@media screen and (min-width: 769px) and (max-width:1024px){
+
+	.main-content{
+
+	width: 70%;
+
+	margin-left: 12vw;
+	margin-right: 20vw;
+	margin-top: 6vw;
+	margin-bottom: 6vw;
+	display: flex;
+}
+
+}
+
+/* ---  --- */
+
+@media screen and (min-width: 1025px) and (max-width: 1200px){
+
+
+}
+
+
+/* --- End of Media Queries --- */

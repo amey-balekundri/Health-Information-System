@@ -1,0 +1,137 @@
+.login_form{
+    background-color: white;
+
+    border-top-right-radius:20px;
+    border-bottom-right-radius:20px;
+    border-top-left-radius:20px;
+    border-bottom-left-radius:20px;
+
+    border-top:2px solid #ccc;
+    border-right:2px solid #ccc;
+    border-left:2px solid #ccc;
+    border-bottom:2px solid #ccc;
+
+    padding-left: 1.5vw;
+    padding-right: 6vw;
+    padding-top: 1vw;
+}
+
+.image1{
+    height: 50vh;
+    margin-left: 50vw;
+
+    margin-top: -85vw;
+
+    opacity: 0.9;
+}
+
+form{
+    padding-left: 2vw;
+    padding-top: 3vw;
+
+    margin-left:2vw;
+    margin-right: -36vw;
+    
+    opacity: 0.7;
+}
+
+label{
+    font-weight: bold;
+}
+
+ul{
+    font-weight: bold;
+    margin-top: 1vw;
+}
+
+small{
+    font-weight: bold;
+}
+
+
+.btn{
+    text-align: center;
+    padding-left: 10vw;
+    padding-right: 10vw;
+
+    margin-left: 9vw;
+}
+
+
+#id_first_name,#id_middle_name,#id_last_name,#id_phone_number,#id_aadhaar_no,#id_email,#id_password1,#id_password2{
+    border: 0;
+    background: none;
+    display: block;
+    border: 2px solid #3498db;
+    width: 45vw;
+    outline: none;
+    color: black;
+    border-radius: 28px;
+    transition: 1.5s
+}
+#id_first_name:focus,#id_middle_name:focus,#id_last_name:focus,#id_phone_number:focus,#id_aadhaar_no:focus,#id_email:focus,#id_password1:focus,#id_password2:focus{
+    border-bottom-color: green;
+    box-shadow: 0 0 5px rgba(0,80,80,.4); 
+    border-radius: 4px;
+
+
+}
+
+/* --- Media Queries --- */
+
+@media screen and (min-width: 481px) and (max-width:768px){ 
+
+    .image1{
+    height: 22vh;
+    margin-left: 50vw;
+
+    margin-top: -165vw;
+
+    opacity: 0.9;
+}
+
+form{
+    padding-left: 2vw;
+    padding-top: 3vw;
+
+    margin-left:2vw;
+    margin-right: 3vw;
+    
+    opacity: 0.7;
+}
+
+}
+
+/* ---  --- */
+
+@media screen and (min-width: 769px) and (max-width:1024px){
+
+    .image1{
+    height: 28vh;
+    margin-left: 50vw;
+
+    margin-top: -145vw;
+
+    opacity: 0.9;
+}
+
+}
+
+/* ---  --- */
+
+@media screen and (min-width: 1025px) and (max-width: 1340px){
+
+    .image1{
+    height: 38vh;
+    margin-left: 50vw;
+
+    margin-top: -105vw;
+
+    opacity: 0.9;
+}
+
+}
+
+
+/* --- End of Media Queries --- */
+

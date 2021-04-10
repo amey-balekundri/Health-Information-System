@@ -1,18 +1,39 @@
 {% extends "patient/patient_base.html" %}
 {% load static %}
 {%block content %}
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="author" content="Yinka Enoch Adedokun">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+	<link href="{% static 'patient/upload_report.css' %}" rel="stylesheet">
+	
+</head>
+
+<body style="background-color: OldLace">
+
 <br>
+
+<h1> <i class="fa fa-upload" aria-hidden="true"></i> Upload Report </h1>
+
+<br><br><br>
+
 <div class="col-md-5">
 <form method='post' action="{% url 'patient_upload_report' %}" enctype="multipart/form-data">
   {% csrf_token %}
-  File name : <input type="text" name='file_name' class='form-control'>
+  <p> File name : </p> <input type="text" name='file_name' class='form-control' id="file_name">
   <br>
-  Select file : <input type='file' name='file' class='form-control' id="report_file"><br>
+  <p> Select file : </p> <input style="padding-bottom: 2.8vw;" type='file' name='file' class='form-control' id="report_file"><br>
   <input type='submit' class='btn btn-info' >
 </form>
 </div>
 
 <img src="" id="reportimg">
 <iframe src="" id="reportpdf" width="50%" height="600px"></iframe>
+<br><br>
+
+</body>
 
 {% endblock content %}

@@ -1,0 +1,57 @@
+{% extends "main/base.html" %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{%block content %}
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="author" content="Yinka Enoch Adedokun">
+	<link href="{% static 'main/contactus.css' %}" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body style="background-color: LightCyan;">
+
+<div>
+<h2 style="text-align: center;margin-top: 2vw;font-size: 40px;"><b>CONTACT US</b></h2>
+
+<p><img class="image1" src="{% static 'main/mainbg7.svg' %}" alt="Image Unavailable"></p>
+
+
+<div class="content-section">
+        <form method="POST">
+            {% csrf_token %}
+            <fieldset class="form-group">
+                <div class="contact_form ">
+                {{ contact_form|crispy }}
+            <div class="form-group">
+                <button class="btn btn-outline-info" type="submit">SEND</button>
+            </div>
+
+            <div>
+  				<a href="#" class="fa fa-facebook"></a>
+
+  				<a href="#" class="fa fa-twitter"></a>
+
+  				<a href="#" class="fa fa-google"></a>
+
+  				<a href="#" class="fa fa-linkedin"></a>
+
+  				<a href="#" class="fa fa-instagram"></a>
+			</div>
+        
+            </fieldset>
+            <br>
+        </form>
+    </div>
+
+
+</div>
+
+<br>
+
+</body>
+
+{% endblock content %}

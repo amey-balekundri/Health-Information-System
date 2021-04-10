@@ -1,18 +1,40 @@
 {% extends "doctor/doctor_base.html" %}
 {% load static %}
+
 {%block content %}
 
-{{doctor.first_name}}
+<head>
+	
+	<link href="{% static 'doctor/profile.css' %}" rel="stylesheet">
+	
+</head>
+
+<body style="background-color: AntiqueWhite">
 <br>
-{{doctor.middle_name}}
+
+	<h1 style="text-align: center;font-weight: bold;">My Profile</h1>
+
 <br>
-{{doctor.last_name}}
-<br>
-{{doctor.aadhaar_no}}
-<br>
-{{doctor.email_id}}
-<br>
-{{doctor.phone_number}}
-<br>
+
+<div class="container">
+<div class="card">
+
+<img class="rounded-circle " src="{{user.doctor.image.url}}" height="175px" width="175px"><br>
+
+	<p>First Name: {{doctor.first_name}} </p>  
+
+	<p>Middle Name:{{doctor.middle_name}} </p> 
+
+	<p>Last Name: {{doctor.last_name}} </p>
+
+	<p>Aadhaar Number: {{doctor.aadhaar_no}} </p>
+
+	<p>Email ID: {{doctor.email_id}} </p>
+
+	<p>Phone Number: {{doctor.phone_number}} </p>
+
+</div>
+</div>
+</body>
 
 {% endblock content %}
