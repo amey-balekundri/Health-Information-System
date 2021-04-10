@@ -1,9 +1,21 @@
 {% extends "main/base.html" %}
 {% block content %}
-    <h2>You have been logged out</h2>
-    <div class="border-top pt-3">
-        <small class="text-muted">
-            <a href="{% url 'login' %}">Log In Again</a>
-        </small>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Yinka Enoch Adedokun">
+    
+</head>
+
+
+<body style="background-color: OldLace">
+
+    <p style="text-align: center;padding-top: 7vw;font-weight: bold;font-size: 4vw;">You have been logged out</p>
+    <br>
+    <div>
+            <a style="font-size: 28px;margin-left: 44vw;" href="{% url 'login' %}">Log In Again</a>
     </div>
+
+</body>
 {% endblock content %}

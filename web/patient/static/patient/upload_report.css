@@ -1,0 +1,83 @@
+
+h1{
+    text-align: center;
+    font-weight: bold;
+}
+
+
+p{
+    font-size: 20px;
+    font-weight: bold;
+
+}
+
+
+
+#file_name,#report_file{
+    border: 0;
+    background: none;
+    display: block;
+    margin: 1vw;
+    border: 2px solid #3498db;
+    padding: 1vw 1vw;
+    width: 30vw;
+    outline: none;
+    color: black;
+    border-radius: 24px;
+    transition: 1.5s
+}
+#file_name:focus,#report_file:focus{
+    border-bottom-color: green;
+    box-shadow: 0 0 5px rgba(0,80,80,.4); 
+    border-radius: 4px;
+}
+
+
+.btn{
+    transition: all .5s ease;
+    width: 13vw;
+    border-radius: 30px;
+    color:#008080;
+    font-weight: bold;
+    background-color: OldLace;
+    border: 1px solid #008080;
+    margin-top: 1vw;
+    margin-bottom: 1vw;
+    margin-left:1.5vw;
+}
+.btn:hover, .btn:focus{
+    background-color: #008080;
+    color:#fff;
+}
+
+
+
+/* --- Media Queries --- */
+
+@media screen and (min-width: 481px) and (max-width:768px){	
+
+
+
+}
+
+
+/* ---  --- */
+
+
+@media screen and (min-width: 769px) and (max-width:1024px){
+
+
+
+}
+
+/* ---  --- */
+
+
+@media screen and (min-width: 1025px) and (max-width: 1500px){
+
+
+
+}
+
+
+/* --- End of Media Queries --- */

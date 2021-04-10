@@ -1,0 +1,152 @@
+
+h1{
+	text-align: center;
+	font-weight: bold;
+}
+
+
+#search_value{
+    border: 0;
+    background: none;
+    display: block;
+    margin: 1vw;
+    border: 2px solid #3498db;
+    padding: 1vw 1vw;
+    width: 30vw;
+    outline: none;
+    color: black;
+    border-radius: 24px;
+    transition: 1.5s;
+}
+#search_value:focus{
+    border-bottom-color: green;
+    box-shadow: 0 0 5px rgba(0,80,80,.4); 
+    border-radius: 4px;
+}
+
+
+.btn{
+    transition: all .5s ease;
+    width: 13vw;
+    border-radius: 30px;
+    color:#008080;
+    font-weight: bold;
+    background-color: OldLace;
+    border: 1px solid #008080;
+    margin-top: 1vw;
+    margin-bottom: 1vw;
+    margin-left:1.2vw;
+}
+
+.btn1{
+    transition: all .5s ease;
+    width: 13vw;
+    border-radius: 30px;
+    color:#008080;
+    font-weight: bold;
+    background-color: OldLace;
+    border: 1px solid #008080;
+    margin-top: 1vw;
+    margin-bottom: 1vw;
+    margin-left:0vw;
+}
+
+.btn:hover, .btn:focus, .btn1:hover, .btn1:focus{
+    background-color: #008080;
+    color:#fff;
+}
+
+
+.card {
+	background: OldLace;
+	color: black;
+  	transition: 0.3s;
+  	 
+  	padding-top: 1vw;
+
+  	width: 25%;
+  	margin-left: 40vw;
+  	margin-top: -14vw;
+	opacity: 0.8;
+
+	text-align: center;
+
+	border: 2px solid black;
+	border-radius: 26px;
+}
+
+
+
+/* --- Media Queries --- */
+
+@media screen and (min-width: 481px) and (max-width:768px){	
+
+	.btn1{
+  
+    width: 20vw;
+  
+    margin-top: 1vw;
+    margin-bottom: 1vw;
+    margin-left:-1vw;
+}
+
+	.card {
+	background: OldLace;
+	color: black;
+  	transition: 0.3s;
+  	 
+  	padding-top: 1vw;
+  	
+  	width: 35%;
+  	margin-left: 40vw;
+  	margin-top: -14vw;
+	opacity: 0.8;
+
+}
+
+}
+
+
+/* ---  --- */
+
+
+@media screen and (min-width: 769px) and (max-width:1024px){
+
+
+.btn1{
+  
+    width: 14vw;
+  
+    margin-top: 1vw;
+    margin-bottom: 1vw;
+    margin-left:-0.7vw;
+}
+
+	.card {
+	background: OldLace;
+	color: black;
+  	transition: 0.3s;
+  	 
+  	padding-top: 1vw;
+  	
+  	width: 35%;
+  	margin-left: 40vw;
+  	margin-top: -14vw;
+	opacity: 0.8;
+
+}
+
+}
+
+/* ---  --- */
+
+
+@media screen and (min-width: 1025px) and (max-width: 1500px){
+
+
+
+}
+
+
+/* --- End of Media Queries --- */
+

@@ -1,9 +1,22 @@
 {% extends "doctor/doctor_base.html" %}
+{% load static %}
+
 {%block content %}
 
+<head>
+    
+    <link href="{% static 'doctor/patient_reports.css' %}" rel="stylesheet">
+    
+</head>
+
+<body style="background-color: AntiqueWhite">
+<br>
+<h1> Patient Reports </h1>
+
 
 <br>
 <br>
+
 <form class="form-inline" method='post' action='{% url "show_reports" %}' enctype="multipart/form-data" id="show_reports">
     {% csrf_token %}
     <div class="form-group mb-2">
@@ -17,7 +30,7 @@
             {% endfor %}
         </select>
     </div>
-    <input type="submit" class="btn btn-primary mb-2" value="Show">
+    <input style="margin-top: 0vw;" type="submit" class="btn mb-2" value="Show">
 </form>
 <script>$('#patient').val("{{val}}").prop('selected',true);</script>
 
@@ -26,16 +39,26 @@
 <br>
 
 <div>
+
     {% for i in report reversed %}
-    {{i.0}} {{i.1}}<a href="https://ipfs.infura.io/ipfs/{{i.2}}" class="btn btn-info" target="_blank">View Report</a>
+
+    <div class="column">
+    <div class="card">
+
+    <p>File Name: {{i.1}}</p>
+    <p>Date and Time: {{i.0}}</p>
+
+    <a href="https://ipfs.infura.io/ipfs/{{i.2}}" class="btn btn-info" target="_blank">View Report</a>
     <br>
+</div>
+</div>
     {% endfor %}
 </div>
 
 <p id='result'></p>
 
 
-
+</body>
 
 
 {% endblock content %}

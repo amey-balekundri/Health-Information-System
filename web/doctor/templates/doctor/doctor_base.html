@@ -26,7 +26,10 @@
 
     <link href="{% static 'doctor/sidebar.css' %}" rel="stylesheet">
 
-    <title>Project</title>
+    <title>Health Infromation System</title>
+
+    <link href="{% static 'patient/icon.jpg' %}" rel="icon">
+
   </head>
   <body>
 
@@ -34,15 +37,15 @@
       <a class="navbar-brand" id="menu-toggle">
         <span class="navbar-toggler-icon"></span>
       </a>
-      <a href="#" class="navbar-brand">Project</a>
+      <a style="font-size: 22px;" href="{% url 'home' %}" class="navbar-brand">HOME</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
 
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <div class="navbar-nav ml-auto mt-2 mt-lg-0">
-          <a class="nav-item nav-link active" href="{% url 'doctor_profile' %}">{{user}}</a>
-          <a class="nav-item nav-link active" href="{% url 'logout' %}">Logout</a>
+          <a style="font-size: 22px;" class="nav-item nav-link active" href="{% url 'doctor_profile' %}">{{user}}</a>
+          <a style="font-size: 22px;" class="nav-item nav-link active" href="{% url 'logout' %}">Logout</a>
         </div>
       </div>
     </nav>
@@ -56,9 +59,9 @@
         <div class="sidebar-heading"></div>
         <div class="sidebar-heading"></div>
         <div class="list-group list-group-flush">
-          <a href="{% url 'doctor_dashboard' %}" class="list-group-item list-group-item-action bg-dark text-white ">Dashboard</a>
-          <a href="{% url 'doctor_view_patients' %}" class="list-group-item list-group-item-action bg-dark text-white">View Patients</a>
-          <a href="{% url 'doctor_patient_report' %}" class="list-group-item list-group-item-action bg-dark text-white">View Reports</a>
+          <a style="font-size: 22px;" href="{% url 'doctor_dashboard' %}" class="list-group-item list-group-item-action bg-dark text-white ">Dashboard</a>
+          <a style="font-size: 22px;" href="{% url 'doctor_view_patients' %}" class="list-group-item list-group-item-action bg-dark text-white">View Patients</a>
+          <a style="font-size: 22px;" href="{% url 'doctor_patient_report' %}" class="list-group-item list-group-item-action bg-dark text-white">View Reports</a>
         </div>
       </div>
       <!-- /#sidebar-wrapper -->

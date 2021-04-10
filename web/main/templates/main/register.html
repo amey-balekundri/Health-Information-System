@@ -1,8 +1,42 @@
-
 {% extends "main/base.html" %}
+{% load static %}
+
 
 {% block content %}
-    <a href="{% url 'patient_register' %}">Patient Register</a>
-    <br>
-    <a href="{% url 'doctor_register' %}">Doctor Register</a>
+
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="author" content="Yinka Enoch Adedokun">
+  <link href="{% static 'main/register.css' %}" rel="stylesheet">
+</head>
+
+
+<body style="background-image:url('/static/main/mainbg2.jpg');background-size:100% 100%;background-repeat: no repeat;">
+	
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <div class="float-container">
+    <div class="card">
+      <img src="media/patient.png" alt="Image Unavailable" style="width:100%">
+        <h2 style="padding:20px;">Patient Registeration</h2>
+  
+          <a href="{% url 'patient_register' %}"><button>REGISTER</button>
+          </a>
+
+    </div>
+  <div class="card">
+    <img src="media/doctor.png" alt="Image Unavailable" style="width:100%">
+      <h2 style="padding:20px;">Doctor Registeration</h2>
+  
+        <a href="{% url 'doctor_register' %}"><button>REGISTER</button>
+        </a>
+
+</div>
+</div>
+
+</body>
+
+
 {% endblock content %}

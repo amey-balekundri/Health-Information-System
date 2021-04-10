@@ -4,6 +4,8 @@ from django.http import HttpResponse,JsonResponse
 from patient.forms import PatientRegisterForm
 from main.forms import UserRegisterForm
 from patient.models import Patient
+from patient.forms import BasicForm
+from patient.models import Basic
 from doctor.models import Doctor
 from django.contrib.auth import login, logout,authenticate
 from django.contrib.auth.decorators import login_required
@@ -14,6 +16,10 @@ import datetime
 from dateutil import tz
 from main.models import User
 from django.db.models import Q
+
+def basic(request):
+    basic_form = BasicForm()
+    return render(request, 'patient/basic.html',{'basic_form': basic_form})
 
 def create_patient(request):
     if request.method == 'POST':
@@ -36,7 +42,7 @@ def create_patient(request):
             blockchain.is_mined(tx)
             login(request,user)
 
-            return redirect('patient_dashboard')
+            return redirect('basic')
     else:
         user_form = UserRegisterForm()
         patient_form = PatientRegisterForm()

@@ -1,0 +1,147 @@
+
+img{
+  margin-left: 4vw;
+}
+
+h1{
+	text-align: center;
+	font-weight: bold;
+}
+
+.column {
+  float: left;
+  width: 25%;
+  padding-left: 0.5vw;
+}
+
+.btn{
+    transition: all .5s ease;
+    width: 12vw;
+    border-radius: 30px;
+    color:#008080;
+    font-weight: bold;
+    background-color: AntiqueWhite;
+    border: 1px solid #008080;
+    margin-top: 1vw;
+    margin-bottom: 1vw;
+    margin-left:3.5vw;
+}
+.btn:hover, .btn:focus{
+    background-color: #008080;
+    color:#fff;
+}
+
+
+.card {
+	background: AntiqueWhite;
+	color: black;
+  	transition: 0.3s;
+
+  	padding-top: 1vw;
+
+  	margin-left: 0vw;
+  	margin-top: 0vw;
+	opacity: 0.8;
+
+	text-align: center;
+
+	border: 2px solid black;
+	border-radius: 26px;
+}
+
+
+
+/* --- Media Queries --- */
+
+@media screen and (min-width: 481px) and (max-width:768px){	
+
+.column {
+  float: left;
+  width: 45%;
+  padding-left: 3vw;
+}
+
+	.card {
+
+  	padding-top: 1vw;
+
+  	margin-left: 0vw;
+  	margin-top: 0vw;
+}
+  	.btn{
+
+    width: 22vw;
+
+    margin-top: 1vw;
+    margin-bottom: 1vw;
+    margin-left:6vw;
+}
+
+}
+
+
+/* ---  --- */
+
+
+@media screen and (min-width: 769px) and (max-width:1024px){
+
+.column {
+  float: left;
+  width: 45%;
+  padding-left: 2.5vw;
+}
+
+	.card {
+
+  	padding-top: 1vw;
+
+  	margin-left: 0vw;
+  	margin-top: 0vw;
+}
+  	.btn{
+
+    width: 18vw;
+
+    margin-top: 2vw;
+    margin-bottom: 1vw;
+    margin-left:4vw;
+}
+
+}
+
+/* ---  --- */
+
+
+@media screen and (min-width: 1025px) and (max-width: 1300px){
+
+img{
+  margin-left: 5vw;
+}
+
+.column {
+  float: left;
+  width: 35%;
+  padding-left: 0.5vw;
+}
+
+	.card {
+
+  	padding-top: 1vw;
+
+  	margin-left: 0vw;
+  	margin-top: 0vw;
+}
+  	.btn{
+
+    width: 14vw;
+
+    margin-top: 1vw;
+    margin-bottom: 1vw;
+    margin-left:5vw;
+}
+
+
+}
+
+
+/* --- End of Media Queries --- */

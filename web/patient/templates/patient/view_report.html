@@ -1,13 +1,38 @@
 {% extends "patient/patient_base.html" %}
 {% load static %}
+
 {%block content %}
 
+<head>
+    
+    <link href="{% static 'patient/view_report.css' %}" rel="stylesheet">
+    
+</head>
+
+<body style="background-color: OldLace">
+
 <div>
+<br>
+	<h1> My Reports </h1>
+	<br>
+	
     {% for i in report reversed%}
-    {{i.0}} {{i.1}}<a href="https://ipfs.infura.io/ipfs/{{i.2}}" class="btn btn-info" target="_blank">View Report</a>
-    <br>
+
+    <div class="column">
+    <div class="card">
+
+    <p>File Name: {{i.1}}</p>
+    <p>Date and Time: {{i.0}}</p>
+ 
+    <a href="https://ipfs.infura.io/ipfs/{{i.2}}" class="btn btn-info" target="_blank">View Report</a>
+ </div>
+  </div>
+
     {% endfor %}
 </div>
+
+
+</body>
 
 
 

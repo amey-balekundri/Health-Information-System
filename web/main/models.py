@@ -69,5 +69,13 @@ class User(AbstractBaseUser):
             return "True"
         else:
             return "False"
+
+
+class Contact(models.Model):
+    full_name = models.CharField(max_length=50)
+    email = models.EmailField()
+    phone_number = models.IntegerField(default=0)
+    message = models.CharField(max_length=300)
+    privatekey=models.JSONField(default=dict)
 	
 		

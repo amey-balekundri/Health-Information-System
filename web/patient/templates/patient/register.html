@@ -1,24 +1,51 @@
-
 {% extends "main/base.html" %}
 {% load crispy_forms_tags %}
+{% load static %}
+
 {% block content %}
 
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Yinka Enoch Adedokun">
+    <link href="{% static 'patient/register.css' %}" rel="stylesheet">
+</head>
+
+
+<body style="background-image:url('/static/main/mainbg2.jpg');background-size:100% 100%;background-repeat: no repeat;">
     <div class="content-section">
         <form method="POST">
             {% csrf_token %}
             <fieldset class="form-group">
-                <legend class="border-bottom mb-4">Patient Registration</legend>
+                <div class="col-md-8 col-xs-12 col-sm-12 login_form ">
+                <legend style="text-align: center;padding-bottom: 10px;font-size: 28px;font-weight: bold;" class="border-bottom mb-4">Patient Registration</legend>
                 {{ patient_form|crispy }}
                 {{ user_form|crispy }}
-            </fieldset>
+                <hr>
             <div class="form-group">
                 <button class="btn btn-outline-info" type="submit">Sign Up</button>
             </div>
-        </form>
-        <div class="border-top pt-3">
-            <small class="text-muted">
+        
+            <small style="margin-left: 200px;" class="text-muted">
                 Already Have An Account? <a class="ml-2" href="{% url 'login' %}">Sign In</a>
             </small>
-        </div>
+            <br>
+            <br>
+            </fieldset>
+            <br>
+           <div>
+                <img class="image1" src="{% static 'patient/bg1.jpg' %}" alt="Image Unavailable">
+            </div>
+        </form>
     </div>
+
+<div>
+    
+</div>
+
+  
+	</body>
+
+	
 {% endblock content %}

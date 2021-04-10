@@ -1,6 +1,100 @@
 {% extends "main/base.html" %}
+{% load static %}
+
 {%block content %}
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="author" content="Yinka Enoch Adedokun">
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="{% static 'main/home.css' %}" rel="stylesheet">
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+	<script src="{% static 'main/home.js' %}"></script>
+</head>
+
+<body style="background-color: LightBlue">
+
 <div>
-    <h1>Main Home</h1>
+	<p class="p1"> Complete Online Based Health Information System </p><br><br>
+
+	<ul>
+		<li> Enabling quick access to patients digital records for more coordinated & effective treatment. </li><br>
+		<li> Providing accurate, up-to-date, and complete case history about patients. </li><br>
+		<li> Securely sharing digital information with doctors. </li><br>
+		<li> Enhancing privacy and security of patients data by using <b>Blockchain Technology. </b></li><br>
+		<li> Problem of lost or misplaced patient documents or reports will be eliminated. </li>
+	</ul>
+	
 </div>
+
+<div>
+	<img class="image1" src="{% static 'main/mainbg1.png' %}" alt="Image Unavailable">
+</div>
+
+<br><br><br>
+
+<div class="card1">
+  <div class="container">
+    <h2 style="text-align: center;padding-top: 15px;"><b>Patient</b></h2><br><br>
+    <p>You will be creating an account with your unique aadhaar number & then you will be
+    logged in into the system and there will be an option to upload the medical documents (previous case history). Also after every visit to hospital, patient can upload their latest documents to the system. Whenever they upload any latest documents, they will be added to their case history. You can also give access to doctors of your documents.</p><br><br>
+  </div>
+</div>
+
+<div class="card2">
+  <div class="container">
+    <h2 style="text-align: center;padding-top: 15px;"><b>Doctor</b></h2><br><br>
+    <p>You will be creating an account with your unique aadhaar number & then you will be
+    logged in into the system and there you will be provided with the real time counter of number of patients sending them their health information. After checking the health information sent by patients you can marked as completed / checked.</p><br><br><br>
+  </div>
+</div>
+
+<br><br><br>
+
+<div class="card3">
+  <div class="container">
+    <h2 style="text-align: center;padding-top: 15px;"><b>Patient Data</b></h2><br><br>
+    <p>Your data will be complete safe and secure. As we are using <b>Blockchain Technology.</b> Documents which you will be sharing online with doctors will be completely secured. </p><br><br>
+  </div>
+</div>
+
+<div class="card4">
+  <div class="container">
+    <h2 style="text-align: center;padding-top: 15px;"><b>Dashboard</b></h2><br><br>
+    <p>You can view and edit your basic data. Also you can see your documents / reports which you have uploaded. You can give access to doctors and also you can revoke your request from doctors.</p><br><br>
+  </div>
+</div>
+
+<br>
+
+<div class="container">
+    <div class="row">
+        <div class="four col-md-4">
+            <div class="counter-box colored"> <i class="fa fa-user" aria-hidden="true"></i> <span class="counter">0</span>
+                <p>Patients</p>
+            </div>
+        </div>
+        <div class="four col-md-4">
+            <div class="counter-box colored"> <i class="fa fa-user-md" aria-hidden="true"> </i> <span class="counter">0</span>
+                <p>Doctors</p>
+            </div>
+        </div>
+        <div class="four col-md-4">
+            <div class="counter-box colored"> <i class="fa fa-upload" aria-hidden="true"></i> <span class="counter">0</span>
+                <p>Uploaded Documents</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<br><br><br>
+
+<p style="text-align: center; font-size: 20px;"> &copy; Copyright XYZ All Rights Reserved </p>
+
+<br><br>
+
+</body>
+
 {% endblock content %}

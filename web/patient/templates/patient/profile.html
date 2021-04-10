@@ -1,22 +1,41 @@
 {% extends "patient/patient_base.html" %}
 {% load static %}
+
 {%block content %}
 
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="author" content="Yinka Enoch Adedokun">
+	
+	<link href="{% static 'patient/profile.css' %}" rel="stylesheet">
+	
+</head>
 
-<img class="rounded-circle " src="{{user.patient.image.url}}" height="125px" width="125px">
+<body style="background-color: OldLace">
 <br>
 
+	<h1 style="text-align: center;font-weight: bold;">My Profile</h1>
 
-{{patient.first_name}}
 <br>
-{{patient.middle_name}}
-<br>
-{{patient.last_name}}
-<br>
-{{patient.aadhaar_no}}
-<br>
-{{patient.email_id}}
-<br>
-{{patient.phone_number}}
-<br>
+
+<div class="container">
+<div class="card">
+
+<img class="rounded-circle " src="{{user.patient.image.url}}" height="175px" width="175px"><br>
+
+	<p>First Name: {{patient.first_name}} </p>
+
+	<p>Middle Name: {{patient.middle_name}} </p>
+
+	<p>Last Name: {{patient.last_name}} </p>
+
+	<p>Aadhaar Number: {{patient.aadhaar_no}} </p>
+
+	<p>Email ID: {{patient.email_id}} </p>
+
+	<p>Phone Number: {{patient.phone_number}} </p>
+
+</div>
+</div>
 {% endblock content %}

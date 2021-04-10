@@ -1,0 +1,50 @@
+{% extends "patient/patient_base.html" %}
+{% load crispy_forms_tags %}
+{% load static %}
+
+{%block content %}
+
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="author" content="Yinka Enoch Adedokun">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+	<link href="{% static 'patient/basic.css' %}" rel="stylesheet">
+	
+</head>
+
+<body style="background-color: OldLace">
+
+
+<div>
+    
+    <br>
+    <h1>Basic Medical Questionnaire</h1>
+
+
+    <div class="content-section">
+        <form method="POST">
+            {% csrf_token %}
+            <fieldset class="form-group">
+                <div class="basic_form ">
+                {{ basic_form|crispy }}
+            <div class="form-group">
+                <button class="btn btn-outline-info" type="submit">SAVE</button>
+            </div>
+        
+            </fieldset>
+            <br>
+        </form>
+    </div>
+
+
+</div>
+
+</div>
+
+
+</body>
+
+{% endblock content %}
