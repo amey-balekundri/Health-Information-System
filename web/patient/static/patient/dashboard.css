@@ -1,6 +1,14 @@
+body{
+    background-color: OldLace;
+}
+
 h1{
 	text-align: center;
 	font-weight: bold;
+}
+
+p{
+    font-size: 30px;
 }
 
 .image1{
@@ -14,7 +22,7 @@ h1{
 }
 
 .container {
-    margin-top: 6vw;
+    margin-top: 2vw;
     margin-left: 1vw;
 }
 
@@ -72,7 +80,6 @@ h1{
 
 .container {
     margin-top: 6vw;
-    margin-left: 5vw;
 }
 
 .counter-box {
@@ -132,7 +139,7 @@ h1{
 
 .container {
     margin-top: 5vw;
-    margin-left: -1.0vw;
+    
 }
 
 .counter-box {
@@ -185,7 +192,7 @@ h1{
 
 .container {
     margin-top: 6vw;
-    margin-left: 1vw;
+    
 }
 
 .counter-box {

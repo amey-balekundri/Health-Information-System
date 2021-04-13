@@ -1,3 +1,11 @@
+body{
+  background-color: OldLace;
+}
+
+img{
+  height:200px;
+  width: 200px !important;
+}
 
 h1{
 	text-align: center;

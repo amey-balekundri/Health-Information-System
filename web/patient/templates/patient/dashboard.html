@@ -2,47 +2,41 @@
 {% load static %}
 
 {%block content %}
-
-
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="author" content="Yinka Enoch Adedokun">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="{% static 'patient/dashboard.css' %}" rel="stylesheet">
 	
-	<link href="{% static 'patient/dashboard.css' %}" rel="stylesheet">
-	
-</head>
+    <div>    
+        <br>
+        <h1>Patient Dashboard</h1>
+        <br>
 
-<body style="background-color: OldLace">
-
-
-<div>
-    
-    <br>
-    <h1>Patient Dashboard</h1>
-    <br>
-
-    <div class="container">
-    <div class="row">
-        <div class="four col-md-4">
-            <div class="counter-box colored"> <i class="fa fa-file" aria-hidden="true"></i> <span class="counter">{{totalreports}}</span>
-                <p>Total Reports</p>
+        <div class="container">
+        <div class="row">
+            <div class="four col-md-4">
+                <div class="counter-box colored"> <i class="fa fa-file" aria-hidden="true"></i> <span class="counter">{{totalreports}}</span>
+                    <p>Total Reports</p>
+                </div>
+            </div>
+            <div class="four col-md-4">
+                <div class="counter-box colored"> <i class="fa fa-user-md" style="font-size:60px;"> </i> <span class="counter">{{doctor_access}}</span>
+                    <p> Doctors Having Access</p>
+                </div>
             </div>
         </div>
-        <div class="four col-md-4">
-            <div class="counter-box colored"> <i class="fa fa-user-md" style="font-size:60px;"> </i> <span class="counter">{{doctor_access}}</span>
-                <p> Doctors Having Access</p>
+        <div class="row">
+            <div class="col-sm-12 col-md-4 mx-2 my-5">
+                <p>Height : {{basic_data.height}}</p>
+                <p>Weight : {{basic_data.weight}}</p>
+                <p>Blood Group : {{basic_data.blood_group}}</p>
+                <p>Allergies : {{basic_data.allergies}}</p>
+                <p>Operations : {{basic_data.operations}}</p>
             </div>
         </div>
     </div>
-</div>
 
-</div>
+    </div>
 
-<div>
-	<img class="image1" src="{% static 'patient/mainbg6.png' %}" alt="Image Unavailable">
-</div>
-</body>
+    <div>
+        <img class="image1" src="{% static 'patient/mainbg6.png' %}" alt="Image Unavailable">
+    </div>
 
 {% endblock content %}

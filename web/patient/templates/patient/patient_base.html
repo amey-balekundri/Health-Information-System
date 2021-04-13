@@ -28,7 +28,7 @@
 
     <title>Health Infromation System</title>
 
-    <link href="{% static 'patient/icon.jpg' %}" rel="icon">
+    <link href="{% static 'patient/icon.JPG' %}" rel="icon">
   </head>
   <body>
 
@@ -59,17 +59,11 @@
         <div class="sidebar-heading"></div>
         <div class="list-group list-group-flush">
           <a style="font-size: 22px;" href="{% url 'patient_dashboard' %}" class="list-group-item list-group-item-action bg-dark text-white ">Dashboard</a>
-
-          <a style="font-size: 22px;" href="{% url 'basic' %}" class="list-group-item list-group-item-action bg-dark text-white">Basic Medical Questionnaire</a>
-
+          <a style="font-size: 22px;" href="{% url 'basic' %}" class="list-group-item list-group-item-action bg-dark text-white">Edit Basic Medical Questionnaire</a>
           <a style="font-size: 22px;" href="{% url 'patient_view_reports' %}" class="list-group-item list-group-item-action bg-dark text-white">View Report</a>
-
           <a style="font-size: 22px;" href="{% url 'patient_upload_report' %}" class="list-group-item list-group-item-action bg-dark text-white">Add Report</a>
-
           <a style="font-size: 22px;" href="{% url 'patient_access_doctor' %}" class="list-group-item list-group-item-action bg-dark text-white" >Access Doctor</a>
-
           <a style="font-size: 22px;" href="{% url 'patient_revoke_doctor' %}" class="list-group-item list-group-item-action bg-dark text-white">Revoke Doctor</a>
-
         </div>
       </div>
       <!-- /#sidebar-wrapper -->

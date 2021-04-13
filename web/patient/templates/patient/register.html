@@ -3,17 +3,7 @@
 {% load static %}
 
 {% block content %}
-
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Yinka Enoch Adedokun">
     <link href="{% static 'patient/register.css' %}" rel="stylesheet">
-</head>
-
-
-<body style="background-image:url('/static/main/mainbg2.jpg');background-size:100% 100%;background-repeat: no repeat;">
     <div class="content-section">
         <form method="POST">
             {% csrf_token %}
@@ -40,12 +30,4 @@
         </form>
     </div>
 
-<div>
-    
-</div>
-
-  
-	</body>
-
-	
 {% endblock content %}

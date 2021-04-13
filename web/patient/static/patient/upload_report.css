@@ -1,3 +1,6 @@
+body{
+    background-color: OldLace;
+}
 
 h1{
     text-align: center;
@@ -20,7 +23,6 @@ p{
     margin: 1vw;
     border: 2px solid #3498db;
     padding: 1vw 1vw;
-    width: 30vw;
     outline: none;
     color: black;
     border-radius: 24px;
@@ -35,7 +37,6 @@ p{
 
 .btn{
     transition: all .5s ease;
-    width: 13vw;
     border-radius: 30px;
     color:#008080;
     font-weight: bold;

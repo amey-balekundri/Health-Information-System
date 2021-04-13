@@ -1,10 +1,5 @@
-
-img{
-	margin-left: 14vw;
-}
-
-.container{
-	margin-left: 20vw;
+body{
+    background-color: OldLace
 }
 
 p{
@@ -16,17 +11,12 @@ p{
     background: OldLace;
     color: black;
     transition: 0.3s;
-     
     width: 55%;
-
     padding-top: 1vw;
-
     margin-left: 0vw;
     margin-top: 0vw;
     opacity: 0.8;
-
     text-align: center;
-
     border: 2px solid black;
     border-radius: 26px;
 }
@@ -35,28 +25,12 @@ p{
 /* --- Media Queries --- */
 
 @media screen and (min-width: 481px) and (max-width:768px){ 
-
-	img{
-	margin-left: 20vw;
-}
-
-.container{
-	margin-left: 10vw;
-}
-
-
-.card {
-
-     
-    width: 85%;
-
-    padding-top: 1vw;
-
-    margin-left: 0vw;
-    margin-top: 0vw;
-    
-}
-
+    .card {
+        width: 85%;
+        padding-top: 1vw;
+        margin-left: 0vw;
+        margin-top: 0vw;
+    }
 }
 
 
@@ -64,56 +38,24 @@ p{
 
 
 @media screen and (min-width: 769px) and (max-width:1024px){
-
-		img{
-	margin-left: 14vw;
-}
-
-.container{
-	margin-left: 10vw;
-}
-
-
-.card {
-
-     
-    width: 75%;
-
-    padding-top: 1vw;
-
-    margin-left: 0vw;
-    margin-top: 0vw;
-    
-}
-
+    .card {     
+        width: 75%;
+        padding-top: 1vw;
+        margin-left: 0vw;
+        margin-top: 0vw;
+    }
 }
 
 /* ---  --- */
 
 
 @media screen and (min-width: 1025px) and (max-width: 1300px){
-
-	img{
-	margin-left: 16vw;
-}
-
-.container{
-	margin-left: 10vw;
-}
-
-
-.card {
-
-     
-    width: 65%;
-
-    padding-top: 1vw;
-
-    margin-left: 0vw;
-    margin-top: 0vw;
-    
-}
-
+    .card {
+        width: 65%;
+        padding-top: 1vw;
+        margin-left: 0vw;
+        margin-top: 0vw;
+    }
 }
 
 

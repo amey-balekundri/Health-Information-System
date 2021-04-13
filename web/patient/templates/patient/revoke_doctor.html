@@ -1,18 +1,7 @@
 {% extends "patient/patient_base.html" %}
 {% load static %}
-{%block content %}
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Yinka Enoch Adedokun">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    
+{%block content %}    
     <link href="{% static 'patient/revoke_doctor.css' %}" rel="stylesheet">
-    
-</head>
-
-<body style="background-color: OldLace">
 <br>
 <h1> Revoke Doctor Access Here </h1>
 
@@ -24,7 +13,7 @@
     {% csrf_token %}
     <div class="column">
   <div class="card">
-    <img src="/media/{{doc.image}}" class="card-img-top" alt="..." >
+    <img src="/media/{{doc.image}}" class="card-img-top mx-auto" alt="..." >
     <div class="card-body">
       <h5 class="card-title"> Full Name: {{doc.first_name}} {{doc.middle_name}} {{doc.last_name}}</h5>
       <p class="card-text">Email: {{doc.email_id}}</p>
@@ -34,18 +23,6 @@
     </div>
   </div> </div>
   </form>
-  
-  
-   
 {% endfor %}
-
-
-
-<br>
-<br>
-
-
-
-
 
 {% endblock content %}

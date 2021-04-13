@@ -1,3 +1,6 @@
+body{
+    background-color: OldLace;
+}
 
 h1{
     text-align: center;
@@ -6,12 +9,6 @@ h1{
 
 p{
     font-weight: bold;
-}
-
-.column {
-  float: left;
-  width: 25%;
-  padding-left: 0.5vw;
 }
 
 .btn{
@@ -24,7 +21,6 @@ p{
     border: 1px solid #008080;
     margin-top: 1vw;
     margin-bottom: 1vw;
-    margin-left: 3vw;
 }
 .btn:hover, .btn:focus{
     background-color: #008080;
@@ -38,8 +34,6 @@ p{
 
     padding-top: 1vw;
 
-    margin-left: 0vw;
-    margin-top: 0vw;
     opacity: 0.8;
 
     text-align: center;
@@ -54,29 +48,7 @@ p{
 
 @media screen and (min-width: 481px) and (max-width:768px){ 
 
-.column {
-  float: left;
-  width: 45%;
-  padding-left: 2vw;
-}
 
-    .card {
-
-    padding-top: 1vw;
-
-    margin-left: 0vw;
-    margin-top: 0vw;
-   
-}
-
-.btn{
-
-    width: 25vw;
-
-    margin-top: 1vw;
-    margin-bottom: 1vw;
-    margin-left: 10vw;
-}
 
 }
 
@@ -86,29 +58,6 @@ p{
 
 @media screen and (min-width: 769px) and (max-width:1024px){
 
-.column {
-  float: left;
-  width: 33%;
-  padding-left: 0.5vw;
-}
-
-   .card {
-
-    padding-top: 1vw;
-
-    margin-left: 0vw;
-    margin-top: 0vw;
-   
-}
-
-.btn{
-
-    width: 15vw;
-
-    margin-top: 1vw;
-    margin-bottom: 1vw;
-    margin-left: 4vw;
-}
 
 
 }
@@ -118,29 +67,6 @@ p{
 
 @media screen and (min-width: 1025px) and (max-width: 1300px){
 
-.column {
-  float: left;
-  width: 25%;
-  padding-left: 0.5vw;
-}
-
-   .card {
-
-    padding-top: 1vw;
-
-    margin-left: 0vw;
-    margin-top: 0vw;
-   
-}
-
-.btn{
-
-    width: 13vw;
-
-    margin-top: 1vw;
-    margin-bottom: 1vw;
-    margin-left: 2.5vw;
-}
 
 
 }
