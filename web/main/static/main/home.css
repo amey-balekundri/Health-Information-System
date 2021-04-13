@@ -1,3 +1,10 @@
+body{
+	background-color: LightBlue;
+}
+
+a:hover {
+	opacity: 0.7;
+  }
 
 .p1{
 	color: black;
@@ -11,7 +18,7 @@
 	height: 25vw;
 	margin-left: 60vw;
 
-	margin-top: -32vw;
+	margin-top: -20vw;
 
 	opacity: 0.9;
 

@@ -1,3 +1,10 @@
+body{
+  background-color: LightCyan;
+}
+
+a:hover {
+  opacity: 0.7;
+}
 
 .contact_form{
     background-color: LightCyan;
