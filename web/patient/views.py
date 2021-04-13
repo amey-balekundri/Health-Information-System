@@ -17,10 +17,6 @@ from dateutil import tz
 from main.models import User
 from django.db.models import Q
 
-def basic(request):
-    basic_form = BasicForm()
-    return render(request, 'patient/basic.html',{'basic_form': basic_form})
-
 def create_patient(request):
     if request.method == 'POST':
         user_form = UserRegisterForm(request.POST)
@@ -67,12 +63,13 @@ def patient_required(function):
 def dashboard(request):
     user=request.user
     patient=Patient.objects.filter(email=user).values()[0]
+    basic_data=Basic.objects.filter(email=user).values()[0]
     patient_account=blockchain.load_account(patient['privatekey'])
     patientInfo=contracts.patientInfo(patient_account)
     totalreports=len(patientInfo[1])
     doctor_access=len(patientInfo[2])
     blockchain.check_for_sufficient_balance(patient_account.address)
-    return render(request, 'patient/dashboard.html',{'totalreports':totalreports,'doctor_access':doctor_access})
+    return render(request, 'patient/dashboard.html',{'totalreports':totalreports,'doctor_access':doctor_access,'basic_data':basic_data})
 
 @login_required
 @patient_required
@@ -152,3 +149,17 @@ def revoke_access(request):
 def patient_profile(request):
     patient=Patient.objects.filter(email=request.user).values()[0]
     return render(request,'patient/profile.html',{'patient':patient})
+
+@login_required
+@patient_required
+def basic(request):
+    if request.method == 'POST':
+        basic_form=BasicForm(request.POST)
+        form = basic_form.save(commit=False)
+        form.email=request.user
+        form.save()
+        return redirect('patient_dashboard')
+    else:
+        basic_form=BasicForm(instance=request.user.basic)
+    return render(request, 'patient/basic.html',{'basic_form': basic_form})
+

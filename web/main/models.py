@@ -76,6 +76,6 @@ class Contact(models.Model):
     email = models.EmailField()
     phone_number = models.IntegerField(default=0)
     message = models.CharField(max_length=300)
-    privatekey=models.JSONField(default=dict)
+
 	
 		
