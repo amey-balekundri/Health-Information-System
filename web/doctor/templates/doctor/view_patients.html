@@ -2,41 +2,29 @@
 {% load static %}
 
 {%block content %}
-
-<head>
-    
     <link href="{% static 'doctor/view_patients.css' %}" rel="stylesheet">
-    
-</head>
-
-<body style="background-color: AntiqueWhite">
 <br>
 <h1> Patients Access </h1>
-
-
 <br>
 <br>
-
+    <div class="row justify-content-center">
     {% for i in patients %}
-    <div class="column">
-      <div class="card">
-        <img class="rounded-circle" height="175px" width="175px" src="/media/{{i.image}}" class="card-img-top" alt="...">
+    <div class="col-sm-12 col-md-4 col-lg-3">
+      <div class="card mx-2 my-2">
+        <img class="rounded-circle mx-auto" height="175px" width="175px" src="/media/{{i.image}}" class="card-img-top" alt="...">
         <div class="card-body">
-          <h5 class="card-title">Full Name: {{i.first_name}} {{i.middle_name}} {{i.last_name}}</h5>
+          <h5 class="card-title">Name: {{i.first_name}} {{i.middle_name}} {{i.last_name}}</h5>
           <p class="card-text">Email: {{i.email_id}}</p>
           <p class="card-text">Phone Number: {{i.phone_number}}</p>
           <form class="form-inline" method='post' action='{% url "show_reports" %}' enctype="multipart/form-data" id="show_reports">
             {% csrf_token %}
             <input type="hidden" name="patient" id="patient" value="{{i.email_id}}">
-          <input type="submit" class="btn btn-primary" value="View Report">
+          <input type="submit" class="btn btn-primary mx-auto" value="View Report">
           </form>
         </div>
       </div><br>
       </div>  
     {% endfor %}
-
-
-
-
+    </div>
 
 {% endblock content %}

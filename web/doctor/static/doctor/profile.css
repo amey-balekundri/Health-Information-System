@@ -1,11 +1,7 @@
-
-img{
-	margin-left: 14vw;
+body{
+    background-color: AntiqueWhite;
 }
 
-.container{
-	margin-left: 20vw;
-}
 
 p{
 	font-size: 24px;
@@ -36,15 +32,6 @@ p{
 
 @media screen and (min-width: 481px) and (max-width:768px){ 
 
-	img{
-	margin-left: 20vw;
-}
-
-.container{
-	margin-left: 10vw;
-}
-
-
 .card {
 
      
@@ -65,15 +52,6 @@ p{
 
 @media screen and (min-width: 769px) and (max-width:1024px){
 
-		img{
-	margin-left: 15vw;
-}
-
-.container{
-	margin-left: 10vw;
-}
-
-
 .card {
 
      
@@ -92,14 +70,6 @@ p{
 
 
 @media screen and (min-width: 1025px) and (max-width: 1300px){
-
-	img{
-	margin-left: 16vw;
-}
-
-.container{
-	margin-left: 10vw;
-}
 
 
 .card {

@@ -2,14 +2,9 @@
 {% load static %}
 
 {%block content %}
-
-<head>
 	
 	<link href="{% static 'doctor/profile.css' %}" rel="stylesheet">
 	
-</head>
-
-<body style="background-color: AntiqueWhite">
 <br>
 
 	<h1 style="text-align: center;font-weight: bold;">My Profile</h1>
@@ -17,24 +12,16 @@
 <br>
 
 <div class="container">
-<div class="card">
+<div class="card mx-auto">
 
-<img class="rounded-circle " src="{{user.doctor.image.url}}" height="175px" width="175px"><br>
-
+<img class="rounded-circle mx-auto" src="{{user.doctor.image.url}}" height="200px" width="200px"><br>
 	<p>First Name: {{doctor.first_name}} </p>  
-
 	<p>Middle Name:{{doctor.middle_name}} </p> 
-
 	<p>Last Name: {{doctor.last_name}} </p>
-
 	<p>Aadhaar Number: {{doctor.aadhaar_no}} </p>
-
 	<p>Email ID: {{doctor.email_id}} </p>
-
 	<p>Phone Number: {{doctor.phone_number}} </p>
-
 </div>
 </div>
-</body>
 
 {% endblock content %}

@@ -3,13 +3,8 @@
 
 {%block content %}
 
-<head>
-    
     <link href="{% static 'doctor/patient_reports.css' %}" rel="stylesheet">
-    
-</head>
 
-<body style="background-color: AntiqueWhite">
 <br>
 <h1> Patient Reports </h1>
 
@@ -38,17 +33,17 @@
 <br>
 <br>
 
-<div>
+<div class="row">
 
     {% for i in report reversed %}
 
-    <div class="column">
-    <div class="card">
+    <div class="col-sm-12 col-md-4 col-lg-3">
+    <div class="card my-2">
 
     <p>File Name: {{i.1}}</p>
     <p>Date and Time: {{i.0}}</p>
 
-    <a href="https://ipfs.infura.io/ipfs/{{i.2}}" class="btn btn-info" target="_blank">View Report</a>
+    <a href="https://ipfs.infura.io/ipfs/{{i.2}}" class="btn btn-info mx-auto" target="_blank">View Report</a>
     <br>
 </div>
 </div>
@@ -56,9 +51,6 @@
 </div>
 
 <p id='result'></p>
-
-
-</body>
 
 
 {% endblock content %}
