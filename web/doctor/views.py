@@ -1,7 +1,7 @@
 from django.shortcuts import render,redirect
 from django.contrib import messages
 from django.http import JsonResponse, HttpResponse
-from doctor.forms import DoctorRegisterForm
+from doctor.forms import DoctorRegisterForm,DoctorUpdateForm
 from main.forms import UserRegisterForm
 from doctor.models import Doctor
 from django.contrib.auth import login, logout,authenticate
@@ -109,7 +109,16 @@ def show_reports(request):
 @doctor_required
 def doctor_profile(request):
     doctor=Doctor.objects.filter(email=request.user).values()[0]
-    return render(request,'doctor/profile.html',{'doctor':doctor})
+    if request.method == 'POST':
+        updateform=DoctorUpdateForm(request.POST,request.FILES,instance=request.user.doctor)
+        if updateform.is_valid():
+            form=updateform.save(commit=False)
+            form.email=request.user
+            form.save()
+            return redirect('doctor_profile')
+    else:
+        updateform=DoctorUpdateForm(instance=request.user.doctor)
+    return render(request,'doctor/profile.html',{'doctor':doctor,'form':updateform})
 
 
 

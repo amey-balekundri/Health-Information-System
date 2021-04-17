@@ -1,7 +1,7 @@
 from django.shortcuts import render,redirect
 from django.contrib import messages
 from django.http import HttpResponse,JsonResponse
-from patient.forms import PatientRegisterForm
+from patient.forms import PatientRegisterForm,PatientUpdateForm
 from main.forms import UserRegisterForm
 from patient.models import Patient
 from patient.forms import BasicForm
@@ -32,6 +32,7 @@ def create_patient(request):
             patient.privatekey=key
             user.save()
             patient.save()
+            Basic.objects.create(email=user)
             blockchain.is_mined(txn_hash)
             patient_account=blockchain.load_account(key)
             tx=contracts.addPatient(patient_account,patient.aadhaar_no)
@@ -148,7 +149,16 @@ def revoke_access(request):
 @patient_required
 def patient_profile(request):
     patient=Patient.objects.filter(email=request.user).values()[0]
-    return render(request,'patient/profile.html',{'patient':patient})
+    if request.method == 'POST':
+        updateform=PatientUpdateForm(request.POST,request.FILES,instance=request.user.patient)
+        if updateform.is_valid():
+            form=updateform.save(commit=False)
+            form.email=request.user
+            form.save()        
+            return redirect('patient_profile')
+    else:
+        updateform=PatientUpdateForm(instance=request.user.patient)
+    return render(request,'patient/profile.html',{'patient':patient,'form':updateform})
 
 @login_required
 @patient_required

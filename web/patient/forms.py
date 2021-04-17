@@ -15,6 +15,15 @@ class PatientRegisterForm(ModelForm):
         model= Patient
         fields=('first_name','middle_name','last_name','phone_number','aadhaar_no')
 
+class PatientUpdateForm(ModelForm):
+    first_name = forms.CharField(required=True)
+    last_name = forms.CharField(required=True)
+    middle_name = forms.CharField(required=True)
+    phone_number = forms.IntegerField(required=True)
+
+    class Meta:
+        model=Patient
+        fields=('first_name','middle_name','last_name','phone_number','image')
 
 class BasicForm(ModelForm):
     height = forms.IntegerField(required=True)
