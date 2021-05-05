@@ -67,7 +67,15 @@ h1{
 
 /* --- Media Queries --- */
 
-@media screen and (min-width: 481px) and (max-width:768px){	
+@media all and (min-width: 100px) and (max-width: 480px){
+
+.image1{
+    display: none;
+}
+
+}
+
+@media all and (min-width: 481px) and (max-width:768px){	
 
 .image1{
     display: none;
@@ -75,7 +83,7 @@ h1{
 
 .container {
     margin-top: 6vw;
-    margin-left: 2vw;
+    margin-left: 5vw;
 }
 
 .counter-box {
@@ -116,7 +124,7 @@ h1{
 /* ---  --- */
 
 
-@media screen and (min-width: 769px) and (max-width:1024px){
+@media all and (min-width: 769px) and (max-width:1024px){
 
 h1{
 	text-align: center;
@@ -174,7 +182,7 @@ h1{
 /* ---  --- */
 
 
-@media screen and (min-width: 1025px) and (max-width: 1500px){
+@media all and (min-width: 1025px) and (max-width: 1275px){
 
 	.image1{
 	height: 36vw;

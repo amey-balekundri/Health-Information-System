@@ -15,10 +15,15 @@
   {% csrf_token %}
   <p> File name : </p> <input type="text" name='file_name' class='form-control' id="file_name">
   <br>
-  <p> Select file : </p> <input style="padding-bottom: 2.8vw;" type='file' name='file' class='form-control' id="report_file"><br>
+  <p> Select file : </p> <input type='file' name='file' class='form-control' id="report_file"><br>
   <input type='submit' class='btn btn-info' >
 </form>
 </div>
+
+	<div>
+        <img class="image1" src="{% static 'patient/upload.png' %}" alt="Image Unavailable">
+    </div>
+
 <div class="col-md 7 col-sm-12">
   <img src="" id="reportimg" width="800px" height="700px">
 <iframe src="" id="reportpdf" width="800px" height="700px"></iframe>

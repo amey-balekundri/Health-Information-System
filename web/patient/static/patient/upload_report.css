@@ -14,15 +14,36 @@ p{
 
 }
 
+.image1{
+    height: 56vh;
+    margin-left: 48vw;
+    margin-top: -22vw;
+
+}
 
 
-#file_name,#report_file{
+
+#file_name{
     border: 0;
     background: none;
     display: block;
-    margin: 1vw;
+    margin: 0.5vw;
     border: 2px solid #3498db;
     padding: 1vw 1vw;
+    outline: none;
+    color: black;
+    border-radius: 24px;
+    transition: 1.5s
+}
+
+#report_file{
+
+    border: 0;
+    background: none;
+    display: block;
+    margin: 0.5vw;
+    border: 2px solid #3498db;
+    padding: 1vw 1vw 2.5vw 1vw;
     outline: none;
     color: black;
     border-radius: 24px;
@@ -55,9 +76,55 @@ p{
 
 /* --- Media Queries --- */
 
-@media screen and (min-width: 481px) and (max-width:768px){	
+@media all and (min-width: 100px) and (max-width: 480px){
+
+.image1{
+    display: none;
+}
+
+#file_name{
+    width: 75vw;
+}
+
+#report_file{
+    margin: 1vw;
+    padding: 1vw 1vw 8vw 2vw;
+    width: 75vw;  
+}
+
+.btn{
+    margin-top: 1vw;
+    margin-bottom: 1vw;
+    margin-left:1.5vw;
+}
+
+}
 
 
+@media all and (min-width: 481px) and (max-width:768px){	
+
+.image1{
+    height: 38vh;
+    margin-left: 50vw;
+    margin-top: -44vw;
+
+}
+
+#file_name{
+    width: 40vw;
+}
+
+#report_file{
+    margin: 1vw;
+    padding: 1vw 1vw 6vw 2vw;
+    width: 40vw;  
+}
+
+.btn{
+    margin-top: 1vw;
+    margin-bottom: 1vw;
+    margin-left:1.5vw;
+}
 
 }
 
@@ -65,18 +132,50 @@ p{
 /* ---  --- */
 
 
-@media screen and (min-width: 769px) and (max-width:1024px){
+@media all and (min-width: 769px) and (max-width:1024px){
 
+.image1{
+    height: 38vh;
+    margin-left: 42vw;
+    margin-top: -30vw;
 
+}
+
+#report_file{
+    margin: 1vw;
+    padding: 1vw 1vw 4.5vw 2vw;  
+}
+
+.btn{
+    margin-top: 1vw;
+    margin-bottom: 1vw;
+    margin-left:1.5vw;
+}
 
 }
 
 /* ---  --- */
 
 
-@media screen and (min-width: 1025px) and (max-width: 1500px){
+@media all and (min-width: 1025px) and (max-width: 1275px){
 
+.image1{
+    height: 56vh;
+    margin-left: 42vw;
+    margin-top: -26vw;
 
+}
+
+#file_name,#report_file{
+    margin: 1vw;
+    padding: 1vw 1vw 3vw 2vw;  
+}
+
+.btn{
+    margin-top: 1vw;
+    margin-bottom: 1vw;
+    margin-left:1.5vw;
+}
 
 }
 

@@ -3,13 +3,17 @@ from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth import login, logout,authenticate
 from django.http import HttpResponse,JsonResponse
 from django.contrib import messages
+from patient.models import Patient
+from doctor.models import Doctor
 from main.models import User
 from main.forms import ContactUsForm
 from main.models import Contact
 # Create your views here.
 
 def home(request):
-    return render(request, 'main/home.html')
+    totalpatients=len(Patient.objects.all())
+    totaldoctors=len(Doctor.objects.all())
+    return render(request, 'main/home.html',{'totalpatients':totalpatients,'totaldoctors':totaldoctors})
 
 def register(request):
     return render(request,'main/register.html')

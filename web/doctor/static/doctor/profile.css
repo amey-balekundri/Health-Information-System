@@ -30,60 +30,50 @@ p{
 
 /* --- Media Queries --- */
 
-@media screen and (min-width: 481px) and (max-width:768px){ 
 
-.card {
+@media all and (min-width: 100px) and (max-width: 480px){
 
-     
-    width: 85%;
+ .card {
+        width: 95%;
+        padding-top: 1vw;
+        margin-left: 0vw;
+        margin-top: 0vw;
+    }
 
-    padding-top: 1vw;
-
-    margin-left: 0vw;
-    margin-top: 0vw;
-    
 }
 
+@media all and (min-width: 481px) and (max-width:768px){ 
+    .card {
+        width: 95%;
+        padding-top: 1vw;
+        margin-left: 0vw;
+        margin-top: 0vw;
+    }
 }
 
 
 /* ---  --- */
 
 
-@media screen and (min-width: 769px) and (max-width:1024px){
-
-.card {
-
-     
-    width: 75%;
-
-    padding-top: 1vw;
-
-    margin-left: 0vw;
-    margin-top: 0vw;
-    
-}
-
+@media all and (min-width: 769px) and (max-width:1024px){
+    .card {     
+        width: 75%;
+        padding-top: 1vw;
+        margin-left: 0vw;
+        margin-top: 0vw;
+    }
 }
 
 /* ---  --- */
 
 
-@media screen and (min-width: 1025px) and (max-width: 1300px){
-
-
-.card {
-
-     
-    width: 65%;
-
-    padding-top: 1vw;
-
-    margin-left: 0vw;
-    margin-top: 0vw;
-    
-}
-
+@media all and (min-width: 1025px) and (max-width: 1275px){
+    .card {
+        width: 65%;
+        padding-top: 1vw;
+        margin-left: 0vw;
+        margin-top: 0vw;
+    }
 }
 
 

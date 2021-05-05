@@ -45,10 +45,35 @@ p{
 
 
 /* --- Media Queries --- */
+@media all and (min-width: 100px) and (max-width: 480px){
 
-@media screen and (min-width: 481px) and (max-width:768px){ 
+.btn{
+    width: 40vw;
+    
+    margin-top: 1vw;
+    margin-bottom: 4vw;
+}
 
+.card {
+    margin-left: 5vw;
+    width: 90%;
+}   
 
+}
+
+@media all and (min-width: 481px) and (max-width:768px){ 
+
+.btn{
+    width: 28vw;
+    
+    margin-top: 1vw;
+    margin-bottom: 1vw;
+}
+
+.card {
+    margin-left: 5vw;
+    width: 90%;
+}
 
 }
 
@@ -56,7 +81,7 @@ p{
 /* ---  --- */
 
 
-@media screen and (min-width: 769px) and (max-width:1024px){
+@media all and (min-width: 769px) and (max-width:1024px){
 
 
 
@@ -65,7 +90,7 @@ p{
 /* ---  --- */
 
 
-@media screen and (min-width: 1025px) and (max-width: 1300px){
+@media all and (min-width: 1025px) and (max-width: 1275px){
 
 
 
