@@ -43,7 +43,7 @@
     <p>File Name: {{i.1}}</p>
     <p>Date and Time: {{i.0}}</p>
 
-    <a onclick="myFunction()" href="https://ipfs.infura.io/ipfs/{{i.2}}" class="btn btn-info mx-auto" target="_blank">View Report</a>
+    <a href="https://ipfs.infura.io/ipfs/{{i.2}}" class="btn btn-info mx-auto" target="_blank">View Report</a>
 <p id='demo'></p>
 
     <br>
@@ -53,11 +53,5 @@
 </div>
 
 <p id='result'></p>
-
-<script>
-function myFunction() {
-  document.getElementById("demo").innerHTML = "Seen";
-}
-</script>
 
 {% endblock content %}
