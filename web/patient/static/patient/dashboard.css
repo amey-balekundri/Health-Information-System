@@ -15,7 +15,7 @@ p{
 	height: 26vw;
 	margin-left: 49vw;
 
-	margin-top: -19vw;
+	margin-top: -45vw;
 
 	opacity: 0.9;
 
@@ -24,6 +24,21 @@ p{
 .container {
     margin-top: 2vw;
     margin-left: 1vw;
+}
+
+.basic{
+    padding-left: 1vw;
+    padding-top: 1vw;
+    display: block;
+    margin-right: 36vw;
+    margin-top: 2vw;
+    border: 2px solid black;
+    border-radius: 20px;
+}
+
+.b{
+    font-size: 22px;
+    padding-top: 0.5vw;
 }
 
 .counter-box {
@@ -71,11 +86,78 @@ p{
 
 /* --- Media Queries --- */
 
-@media screen and (min-width: 481px) and (max-width:768px){	
+@media all and (min-width: 100px) and (max-width: 480px){
+
+.image1{
+    display: none;
+
+}
+
+.basic{
+    padding-left: 1vw;
+    padding-top: 1vw;
+    display: block;
+    margin-right: 0vw;
+    margin-top: 2vw;
+    border: 2px solid black;
+    border-radius: 20px;
+}
+
+.container {
+    margin-top: 6vw;
+}
+
+.counter-box {
+    display: block;
+    background: #f6f6f6;
+    padding: 2.5vw 3.5vw 3.5vw 3vw;
+    margin-bottom: 3vw;
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 20px;
+}
+
+.counter-box p {
+    margin: 3.0vw 0 0;
+    padding: 0;
+    color: #909090;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.counter-box i {
+    font-size: 50px;
+    margin: 0 0 1.0vw;
+    color: #d2d2d2
+}
+
+.counter {
+    display: block;
+    font-size: 30px;
+    font-weight: 700;
+    color: #666;
+    line-height: 28px
+}
+
+}
+
+
+
+@media all and (min-width: 481px) and (max-width:768px){	
 
 .image1{
 	display: none;
 
+}
+
+.basic{
+    padding-left: 1vw;
+    padding-top: 1vw;
+    display: block;
+    margin-right: 0vw;
+    margin-top: 2vw;
+    border: 2px solid black;
+    border-radius: 20px;
 }
 
 .container {
@@ -120,7 +202,7 @@ p{
 /* ---  --- */
 
 
-@media screen and (min-width: 769px) and (max-width:1024px){
+@media all and (min-width: 769px) and (max-width:1024px){
 
 h1{
 	text-align: center;
@@ -131,10 +213,20 @@ h1{
 	height: 22vw;
 	margin-left: 44vw;
 
-	margin-top: -18vw;
+	margin-top: -30vw;
 
 	opacity: 0.9;
 
+}
+
+.basic{
+    padding-left: 1vw;
+    padding-top: 1vw;
+    display: block;
+    margin-right: 30vw;
+    margin-top: 2vw;
+    border: 2px solid black;
+    border-radius: 20px;
 }
 
 .container {
@@ -178,13 +270,13 @@ h1{
 /* ---  --- */
 
 
-@media screen and (min-width: 1025px) and (max-width: 1500px){
+@media all and (min-width: 1025px) and (max-width: 1275px){
 
 	.image1{
 	height: 20vw;
 	margin-left: 53vw;
 
-	margin-top: -18vw;
+	margin-top: -30vw;
 
 	opacity: 0.9;
 

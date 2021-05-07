@@ -83,13 +83,39 @@ small{
 
 /* --- Media Queries --- */
 
-@media screen and (min-width: 481px) and (max-width:768px){ 
+@media all and (min-width: 100px) and (max-width: 480px){
+
+    .image1{
+    display: none;
+}
+
+form{
+    padding-left: 1vw;
+    padding-top: 3vw;
+
+    margin-left:2vw;
+    margin-right: 3vw;
+    
+    opacity: 0.7;
+}
+
+#id_first_name,#id_middle_name,#id_last_name,#id_phone_number,#id_aadhaar_no,#id_email,#id_password1,#id_password2{
+
+    width: 75vw;
+  
+}
+
+}
+
+
+
+@media all and (min-width: 481px) and (max-width:768px){ 
 
     .image1{
     height: 22vh;
     margin-left: 50vw;
 
-    margin-top: -165vw;
+    margin-top: -210vw;
 
     opacity: 0.9;
 }
@@ -108,7 +134,7 @@ form{
 
 /* ---  --- */
 
-@media screen and (min-width: 769px) and (max-width:1024px){
+@media all and (min-width: 769px) and (max-width:1024px){
 
     .image1{
     height: 28vh;
@@ -123,7 +149,7 @@ form{
 
 /* ---  --- */
 
-@media screen and (min-width: 1025px) and (max-width: 1340px){
+@media all and (min-width: 1025px) and (max-width: 1275px){
 
     .image1{
     height: 38vh;

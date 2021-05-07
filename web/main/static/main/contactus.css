@@ -122,7 +122,53 @@ label{
 
 /* --- Media Queries --- */
 
-@media screen and (min-width: 481px) and (max-width:768px){ 
+@media all and (min-width: 100px) and (max-width: 480px){
+
+    .image1{
+      display: none;
+}
+
+form{  
+    margin-top: 0vw;
+    margin-left: 3vw;
+    margin-right: 3vw;
+}
+
+#id_full_name,#id_email,#id_phone_number,#id_message{
+    
+    width: 70vw;
+    
+}
+
+.btn{
+    text-align: center;
+    padding-left: 14vw;
+    padding-right: 14vw;
+
+    margin-left: 14vw;
+}
+
+.contact_form{
+
+    padding-left: 6vw;
+    padding-top: 2vw;
+}
+
+.fa {
+  padding: 1.3vw;
+  font-size: 30px;
+  width: 6.2vw;
+}
+
+.fa-facebook {
+  margin-left: 35vw;
+}
+
+}
+
+
+
+@media all and (min-width: 481px) and (max-width:768px){ 
 
   .image1{
   height: 30vw;
@@ -153,7 +199,7 @@ form{
 
 /* ---  --- */
 
-@media screen and (min-width: 769px) and (max-width:1024px){
+@media all and (min-width: 769px) and (max-width:1024px){
 
   .image1{
   height: 30vw;
@@ -187,7 +233,7 @@ form{
 
 /* ---  --- */
 
-@media screen and (min-width: 1025px) and (max-width: 1300px){
+@media all and (min-width: 1025px) and (max-width: 1300px){
 
   .image1{
   height: 26vw;

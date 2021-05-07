@@ -99,7 +99,51 @@ label{
 
 /* --- Media Queries --- */
 
-@media screen and (min-width: 481px) and (max-width:768px){	
+@media all and (min-width: 100px) and (max-width: 480px){
+
+	.main-content{
+	width: 90%;
+
+	margin-left: 5vw;
+	margin-right: 20vw;
+	margin-top: 6vw;
+	margin-bottom: 6vw;
+	display: flex;
+}
+
+.company__info{
+	display: none;
+}
+
+#id_username,#id_password{
+    width: 65vw;   
+}
+
+.login_form{
+	background-color: white;
+	border-top-left-radius:20px;
+	border-bottom-left-radius:20px;
+	border-top:1px solid #ccc;
+	border-right:1px solid #ccc;
+}
+
+.row > h2{
+	padding-left: 24vw;
+}
+
+.btn{
+	width: 30vw;
+	margin-top: 1vw;
+	margin-bottom: 1vw;
+	margin-left:-10vw;
+}
+
+
+}
+
+
+
+@media all and (min-width: 481px) and (max-width:768px){	
 
 	.main-content{
 	width: 65%;
@@ -136,7 +180,7 @@ label{
 
 /* ---  --- */
 
-@media screen and (min-width: 769px) and (max-width:1024px){
+@media all and (min-width: 769px) and (max-width:1024px){
 
 	.main-content{
 
@@ -153,7 +197,7 @@ label{
 
 /* ---  --- */
 
-@media screen and (min-width: 1025px) and (max-width: 1200px){
+@media all and (min-width: 1025px) and (max-width: 1275px){
 
 
 }

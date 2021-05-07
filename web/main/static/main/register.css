@@ -43,17 +43,49 @@ button:hover, a:hover {
 
 /* --- Media Queries --- */
 
-@media screen and (min-width: 481px) and (max-width:768px){ 
+@media all and (min-width: 100px) and (max-width: 480px){
 
   .float-container {
-    padding-top: 28vw;
+    padding-top: 10vw;
     padding-left: 0vw;
 }
 
 .card {
-    width: 30vw;
+    width: 40vw;
     padding: 1.6vw;
-    margin-left: 12vw;
+    margin-left: 2vw;
+}
+
+button {
+  width: 30vw;
+  
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+h2{
+  font-size: 18px;
+}
+
+
+}
+
+
+
+@media all and (min-width: 481px) and (max-width:768px){ 
+
+  .float-container {
+    padding-top: 10vw;
+    padding-left: 0vw;
+}
+
+.card {
+    width: 37vw;
+    padding: 1.6vw;
+    margin-left: 6vw;
 }
 
 button {
@@ -67,17 +99,17 @@ a {
 }
 
 h2{
-  font-size: 20px;
+  font-size: 18px;
 }
 
 }
 
 /* ---  --- */
 
-@media screen and (min-width: 769px) and (max-width:1024px){
+@media all and (min-width: 769px) and (max-width:1024px){
 
     .float-container {
-    padding-top: 22vw;
+    padding-top: 6vw;
     padding-left: 0vw;
 }
 
@@ -105,10 +137,10 @@ h2{
 
 /* ---  --- */
 
-@media screen and (min-width: 1025px) and (max-width: 1200px){
+@media all and (min-width: 1025px) and (max-width: 1275px){
 
   .float-container {
-    padding-top: 14vw;
+    padding-top: 5vw;
     padding-left: 0vw;
 }
 

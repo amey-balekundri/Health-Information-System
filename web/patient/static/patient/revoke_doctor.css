@@ -58,7 +58,33 @@ h1{
 
 /* --- Media Queries --- */
 
-@media screen and (min-width: 481px) and (max-width:768px){	
+@media all and (min-width: 100px) and (max-width: 480px){
+
+.column {
+  float: left;
+  width: 90%;
+  padding-left: 7vw;
+}
+
+  .card {
+
+    padding-top: 1vw;
+
+    margin-left: 0vw;
+    margin-top: 0vw;
+}
+    .btn{
+
+    width: 46vw;
+
+    margin-top: 1vw;
+    margin-bottom: 1vw;
+    margin-left:0vw;
+}
+
+}
+
+@media all and (min-width: 481px) and (max-width:768px){	
 
 .column {
   float: left;
@@ -75,7 +101,7 @@ h1{
 }
   	.btn{
 
-    width: 22vw;
+    width: 30vw;
 
     margin-top: 1vw;
     margin-bottom: 1vw;
@@ -88,7 +114,7 @@ h1{
 /* ---  --- */
 
 
-@media screen and (min-width: 769px) and (max-width:1024px){
+@media all and (min-width: 769px) and (max-width:1024px){
 
 .column {
   float: left;
@@ -117,7 +143,7 @@ h1{
 /* ---  --- */
 
 
-@media screen and (min-width: 1025px) and (max-width: 1300px){
+@media all and (min-width: 1025px) and (max-width: 1275px){
 
 .column {
   float: left;

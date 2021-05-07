@@ -73,7 +73,42 @@ label{
 
 /* --- Media Queries --- */
 
-@media screen and (min-width: 481px) and (max-width:768px){ 
+@media all and (min-width: 100px) and (max-width: 480px){
+
+    .basic_form{
+
+    padding-left: 6vw;
+    padding-top: 2vw;
+}
+
+form{
+    padding-left: 0vw;
+    padding-top: 2vw;
+
+    margin-left: 8vw;
+    margin-right: 10vw;
+    margin-top: 2vw; 
+
+}
+#id_height,#id_weight,#id_blood_group,#id_allergies,#id_operations{
+
+    width: 60vw;
+    
+}
+
+.btn{
+    text-align: center;
+    padding-left: 12vw;
+    padding-right: 12vw;
+
+    margin-left: 14vw;
+    margin-top: 2vw;
+    margin-bottom: 1vw;
+}
+
+}
+
+@media all and (min-width: 481px) and (max-width:768px){ 
 
 
 .basic_form{
@@ -111,7 +146,7 @@ form{
 
 /* ---  --- */
 
-@media screen and (min-width: 769px) and (max-width:1024px){
+@media all and (min-width: 769px) and (max-width:1024px){
 
 .basic_form{
 
@@ -149,7 +184,7 @@ form{
 
 /* ---  --- */
 
-@media screen and (min-width: 1025px) and (max-width: 1300px){
+@media all and (min-width: 1025px) and (max-width: 1275px){
 
 
 form{

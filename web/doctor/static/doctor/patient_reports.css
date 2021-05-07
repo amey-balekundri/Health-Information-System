@@ -18,6 +18,7 @@ h1{
     font-weight: bold;
     background-color: AntiqueWhite;
     border: 1px solid #008080;
+    width:10vw;
 }
 .btn:hover, .btn:focus{
     background-color: #008080;
@@ -44,9 +45,19 @@ h1{
 
 /* --- Media Queries --- */
 
-@media screen and (min-width: 481px) and (max-width:768px){	
+@media all and (min-width: 100px) and (max-width: 480px){
 
+.btn{
+    width:46vw;
+}
 
+}
+
+@media all and (min-width: 481px) and (max-width:768px){	
+
+.btn{
+    width:26vw;
+}
 
 }
 
@@ -54,19 +65,23 @@ h1{
 /* ---  --- */
 
 
-@media screen and (min-width: 769px) and (max-width:1024px){
+@media all and (min-width: 769px) and (max-width:1024px){
 
-
+.btn{
+    width:16vw;
+}
 
 }
 
 /* ---  --- */
 
 
-@media screen and (min-width: 1025px) and (max-width: 1300px){
+@media all and (min-width: 1025px) and (max-width: 1275px){
 
 
-
+.btn{
+    width:14vw;
+}
 
 }
 

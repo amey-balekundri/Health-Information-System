@@ -7,7 +7,7 @@
 	<link href="{% static 'main/home.css' %}" rel="stylesheet">
 	<script src="{% static 'main/home.js' %}"></script>
 
-<div>
+<div class="main">
 	<p class="p1"> Complete Online Based Health Information System </p><br><br>
 
 	<ul>
@@ -23,58 +23,60 @@
 <div>
 	<img class="image1" src="{% static 'main/mainbg1.png' %}" alt="Image Unavailable">
 </div>
-
-<br><br><br>
-
-<div class="card1">
-  <div class="container">
-    <h2 style="text-align: center;padding-top: 15px;"><b>Patient</b></h2><br><br>
-    <p>You will be creating an account with your unique aadhaar number & then you will be
-    logged in into the system and there will be an option to upload the medical documents (previous case history). Also after every visit to hospital, patient can upload their latest documents to the system. Whenever they upload any latest documents, they will be added to their case history. You can also give access to doctors of your documents.</p><br><br>
-  </div>
+<div class="break">
+<br><br><br><br><br><br>
 </div>
+<div class="cards">
+      <div class="col-lg-3 col-md-6 col-sm-6" style="float:left">
+       <div class="card mb-2">
+          <div class="card-body">
+            <h2 style="text-align: center;padding-top: 15px;"><b>Patient</b></h2><br>
+    <p class="pr1">You will be creating an account with your unique aadhaar number & then you will be
+    logged in into the system and there will be an option to upload the medical documents (previous case history). Also after every visit to hospital, patient can upload their latest documents to the system. Whenever they upload any latest documents, they will be added to their case history. You can also give access to doctors of your documents.</p><br>
+          </div>
+        </div>
+      </div>
 
-<div class="card2">
-  <div class="container">
-    <h2 style="text-align: center;padding-top: 15px;"><b>Doctor</b></h2><br><br>
-    <p>You will be creating an account with your unique aadhaar number & then you will be
-    logged in into the system and there you will be provided with the real time counter of number of patients sending them their health information. After checking the health information sent by patients you can marked as completed / checked.</p><br><br><br>
-  </div>
+      <div class="col-lg-3 col-md-6 col-sm-6" style="float:left">
+        <div class="card mb-2">
+          <div class="card-body">
+            <h2 style="text-align: center;padding-top: 15px;"><b>Doctor</b></h2><br>
+            <p class="pr2">You will be creating an account with your unique aadhaar number & then you will be
+    logged in into the system and there you will be provided with the real time counter of number of patients sending them their health information. After checking the health information sent by patients you can marked as completed / checked.</p><br>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6 col-sm-6" style="float:left">
+        <div class="card mb-2">
+          <div class="card-body">
+            <h2 style="text-align: center;padding-top: 15px;"><b>Patient Data</b></h2><br>
+            <p class="pr3">Your data will be complete safe and secure. As we are using <b>Blockchain Technology.</b> Documents which you will be sharing online with doctors will be completely secured. </p><br>
+          </div>
+        </div>
+      </div>
+      
+       <div class="col-lg-3 col-md-6 col-sm-6" style="float:left">
+       <div class="card mb-2">
+          <div class="card-body">
+            <h2 style="text-align: center;padding-top: 15px;"><b>Dashboard</b></h2><br>
+            <p class="pr4">You can view and edit your basic data. Also you can see your documents / reports which you have uploaded. You can give access to doctors and also you can revoke your request from doctors.</p><br>
+          </div> 
+        </div>
+      </div>
 </div>
-
-<br><br><br>
-
-<div class="card3">
-  <div class="container">
-    <h2 style="text-align: center;padding-top: 15px;"><b>Patient Data</b></h2><br><br>
-    <p>Your data will be complete safe and secure. As we are using <b>Blockchain Technology.</b> Documents which you will be sharing online with doctors will be completely secured. </p><br><br>
-  </div>
-</div>
-
-<div class="card4">
-  <div class="container">
-    <h2 style="text-align: center;padding-top: 15px;"><b>Dashboard</b></h2><br><br>
-    <p>You can view and edit your basic data. Also you can see your documents / reports which you have uploaded. You can give access to doctors and also you can revoke your request from doctors.</p><br><br>
-  </div>
-</div>
-
-<br>
+<br><br><br><br>
 
 <div class="container">
     <div class="row">
-        <div class="four col-md-4">
-            <div class="counter-box colored"> <i class="fa fa-user" aria-hidden="true"></i> <span class="counter">0</span>
-                <p>Patients</p>
+        <div class="col-md-6">
+            <div class="counter-box colored"> <i class="fa fa-user" aria-hidden="true"></i> <span class="counter">{{totalpatients}}</span>
+                <p>Registered Patients</p>
             </div>
         </div>
-        <div class="four col-md-4">
-            <div class="counter-box colored"> <i class="fa fa-user-md" aria-hidden="true"> </i> <span class="counter">0</span>
-                <p>Doctors</p>
-            </div>
-        </div>
-        <div class="four col-md-4">
-            <div class="counter-box colored"> <i class="fa fa-upload" aria-hidden="true"></i> <span class="counter">0</span>
-                <p>Uploaded Documents</p>
+        <div class="col-md-6">
+            <div class="counter-box colored"> <i class="fa fa-user-md" aria-hidden="true"> </i> <span class="counter">{{totaldoctors}}</span>
+                <p>Registered Doctors</p>
             </div>
         </div>
     </div>
