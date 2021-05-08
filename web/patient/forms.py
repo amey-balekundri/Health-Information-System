@@ -26,11 +26,11 @@ class PatientUpdateForm(ModelForm):
         fields=('first_name','middle_name','last_name','phone_number','image')
 
 class BasicForm(ModelForm):
-    height = forms.IntegerField(required=True)
-    weight = forms.IntegerField(required=True)
-    blood_group = forms.CharField(required=True)
-    allergies = forms.CharField(required=False,label="If any Specific Allergy (optional)")
-    operations = forms.CharField(required=False,label="If any Minor/Major Operation (optional)")
+    height = forms.IntegerField(required=True,label="Height (in cm)")
+    weight = forms.IntegerField(required=True,label="Weight (in kg)")
+    blood_group = forms.CharField(required=True,label="Blood Group")
+    allergies = forms.CharField(required=False,label="Any Specific Allergy")
+    operations = forms.CharField(required=False,label="Any Minor/Major Operation")
     class Meta:
         model= Basic
         fields=('height','weight','blood_group','allergies','operations')

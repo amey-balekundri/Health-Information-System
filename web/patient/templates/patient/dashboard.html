@@ -5,10 +5,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="{% static 'patient/dashboard.css' %}" rel="stylesheet">
 
-	
+    
     <div>    
         <br>
-        <h1>Patient Dashboard</h1>
+        <h1>{{patient.first_name}}'s Dashboard</h1>
         <br>
 
         <div class="container">
@@ -27,7 +27,7 @@
 
         <div class="basic">
             <div>
-                <u><h3>My Basic Medical Details</h3></u>
+                <u><h3>My Basic Medical Information</h3></u>
                 <p class="b">Height : {{basic_data.height}}</p>
                 <p class="b">Weight : {{basic_data.weight}}</p>
                 <p class="b">Blood Group : {{basic_data.blood_group}}</p>

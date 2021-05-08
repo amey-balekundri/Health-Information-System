@@ -63,7 +63,7 @@ def dashboard(request):
     doctor_account=blockchain.load_account(doctor['privatekey'])
     doctorInfo=contracts.doctorInfo(doctor_account)
     patient_access=len(doctorInfo[1])
-    return render(request, 'doctor/dashboard.html',{'patient_access':patient_access})
+    return render(request, 'doctor/dashboard.html',{'patient_access':patient_access,'doctor':doctor})
 
 @login_required
 @doctor_required

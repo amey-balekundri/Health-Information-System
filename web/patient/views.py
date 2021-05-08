@@ -67,10 +67,12 @@ def dashboard(request):
     basic_data=Basic.objects.filter(email=user).values()[0]
     patient_account=blockchain.load_account(patient['privatekey'])
     patientInfo=contracts.patientInfo(patient_account)
+    
     totalreports=len(patientInfo[1])
     doctor_access=len(patientInfo[2])
+    
     blockchain.check_for_sufficient_balance(patient_account.address)
-    return render(request, 'patient/dashboard.html',{'totalreports':totalreports,'doctor_access':doctor_access,'basic_data':basic_data})
+    return render(request, 'patient/dashboard.html',{'totalreports':totalreports,'doctor_access':doctor_access,'basic_data':basic_data,'patient':patient})
 
 @login_required
 @patient_required

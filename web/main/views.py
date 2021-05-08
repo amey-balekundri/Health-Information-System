@@ -44,13 +44,15 @@ def login_request(request):
             if user is not None :
                 login(request,user)
                 if user_type=='patient':
+                    
                     return redirect('patient_dashboard')
                 if user_type=='doctor':
+                    
                     return redirect('doctor_dashboard')
             else:
-                messages.error(request,"Invalid username or password")
+                messages.error(request,"Invalid Email or Password")
         else:
-                messages.error(request,"Invalid username or password")
+                messages.error(request,"Invalid Email or Password")
     return render(request, 'main/login.html',
     context={'form':AuthenticationForm()})
 
