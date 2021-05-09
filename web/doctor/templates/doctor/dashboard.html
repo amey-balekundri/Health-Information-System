@@ -3,11 +3,11 @@
 
 {%block content %}
 
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">	
-	<link href="{% static 'doctor/dashboard.css' %}" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">   
+    <link href="{% static 'doctor/dashboard.css' %}" rel="stylesheet">
 
 <div>
-    <br><h1>Doctor Dashboard</h1>
+    <br><h1>{{doctor.first_name}}'s Dashboard</h1>
     <br>
     <div class="container">
     <div class="row">
@@ -20,7 +20,7 @@
 </div>
 
 <div>
-	<img class="image1" src="{% static 'patient/mainbg6.png' %}" alt="Image Unavailable">
+    <img class="image1" src="{% static 'patient/mainbg6.png' %}" alt="Image Unavailable">
 </div>
 
 </div>
