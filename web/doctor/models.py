@@ -9,6 +9,8 @@ class Doctor(models.Model):
     last_name=models.CharField(max_length=30)
     phone_number = models.IntegerField(default=0)
     aadhaar_no=models.IntegerField(default=0)
+    specialization=models.CharField(max_length=30)
+    city=models.CharField(max_length=30)
     address=models.CharField(max_length=50)
     privatekey=models.JSONField(default=dict)
     image=models.ImageField(default='doctor.png',upload_to='profile_pics')

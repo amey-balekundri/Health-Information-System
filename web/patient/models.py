@@ -9,6 +9,7 @@ class Patient(models.Model):
     last_name=models.CharField(max_length=30)
     phone_number = models.IntegerField(default=0)
     aadhaar_no=models.IntegerField(default=0)
+    city=models.CharField(max_length=30)
     address=models.CharField(max_length=50)
     privatekey=models.JSONField(default=dict)
     image=models.ImageField(default='patient.png',upload_to='profile_pics')
