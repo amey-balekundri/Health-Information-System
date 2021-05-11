@@ -1,5 +1,6 @@
 {% extends "patient/patient_base.html" %}
 {% load static %}
+{% load crispy_forms_tags %}
 {%block content %}
     
 <link href="{% static 'patient/access_doctor.css' %}" rel="stylesheet">
@@ -11,30 +12,67 @@
 <br>
 <br>
 <br>
-
-<div class="col-md-5">
-    <input id="search_value" class="form-control mb-3" placeholder="type doctor's email here to search..." /> <br>
+<div class="container-fluid row">
+<div class="col-md-6 ">
+    <input id="search_value" class="form-control mb-3" placeholder="type doctor's email/phone no here to search..." /> <br>
     <input id="search_here" type="submit" class="btn btn-primary" value="Search">
 </div>
-    <br>
-    <br>
-    <br>
+<div class="col-md-6">
     <div id="result">
-    <form method="POST" action="{% url 'grant_access' %}" enctype="multipart/form-data">
-        {% csrf_token %}
-    <div class="card">
-      <img src="" class="card-img-top mx-auto" alt="..." id="img"></img>
-      <div class="card-body">
-        <p style="font-weight: bold;">Full Name: </p> <h5 class="card-title" id='name'></h5>
-        <p style="font-weight: bold;">Email: </p><p id='email_id' class="card-text"></p>
-        <input type="hidden" name="email_id" id="email_id2">
-        <p style="font-weight: bold;">Phone Number: </p> <p id='phone_no' class="card-text"></p>
-        <input type="submit" class="btn1" value="Grant Access">
-      </div>
+      <form method="POST" action="{% url 'grant_access' %}" enctype="multipart/form-data">
+          {% csrf_token %}
+          <div class="card">
+            <img src="" class="card-img-top mx-auto" alt="..." id="img"></img>
+            <div class="card-body mx-auto">
+              <p class="card-title" id='name'></p>
+              <p id='email_id' class="card-text"></p>
+              <input type="hidden" name="email_id" id="email_id2">
+              <p id="specialization" class="card-text"></p>
+              <p id="city" class="card-text"></p>
+              <p id='phone_no' class="card-text"></p>
+              <input type="submit" class="btn1" value="Grant Access">
+            </div>
+          </div>
+      </form>
     </div>
-    <br><br>
-    </form>
-    </div>
+</div>
     <div id='not_found'></div>
+</div>
+
+<div class="container-fluid mt-5">
+      <div class="row">
+        <div class="col-sm-12 col-md-6 col-lg-6">
+          {{ search_form.city|as_crispy_field }}
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-6">
+          {{ search_form.specialization|as_crispy_field }}
+        </div>
+      </div>
+      <input id="filter" type="submit" class="btn1" value="Search"></input>
+</div>
+
+<div class="cotainer-fluid">
+  <div class="row" id="filter_result">
+    {% for doc in doctor %}
+      <div class="col-sm-12 col-md-6 col-lg-3">
+        <form method="POST" action="{% url 'grant_access' %}" enctype="multipart/form-data">
+          {% csrf_token %}
+          <div class="card mx-2 my-2 p-2">
+            <img src="{{doc.image.url}}" class="card-img-top mx-auto" alt="..." id="img"></img>
+            <div class="card-body mx-auto">
+              <p class="card-title">Name:{{doc.first_name}} {{doc.middle_name}} {{doc.last_name}}</p>
+              <p class="card-text">Email Id:{{doc.email_id}}</p>
+              <input type="hidden" name="email_id" value={{doc.email_id}}>
+              <p class="card-text">Specialization:{{doc.specialization}}</p>
+              <p class="card-text">City:{{doc.city}}</p>
+              <p class="card-text">Phone No:{{doc.phone_number}}</p>
+              <input type="submit" class="btn1" value="Grant Access">
+            </div>
+          </div>
+        </form>
+      </div>
+    {% endfor %}
+  </div>
+</div>
 
 {% endblock content %}

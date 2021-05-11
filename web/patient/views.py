@@ -4,7 +4,7 @@ from django.http import HttpResponse,JsonResponse
 from patient.forms import PatientRegisterForm,PatientUpdateForm
 from main.forms import UserRegisterForm
 from patient.models import Patient
-from patient.forms import BasicForm
+from patient.forms import BasicForm,Search
 from patient.models import Basic
 from doctor.models import Doctor
 from django.contrib.auth import login, logout,authenticate
@@ -117,16 +117,32 @@ def revoke_doctor(request):
 @login_required
 @patient_required
 def access_doctor(request):
-    return render(request,'patient/access_doctor.html')
+    user=request.user
+    patient=Patient.objects.filter(email=user).values()[0]
+    doctor=Doctor.objects.filter(city=patient['city']).all()
+    search_form=Search(initial={'city':patient['city']})
+    return render(request,'patient/access_doctor.html',{'doctor':doctor,'search_form':search_form})
 
 def search_doctor(request):
     search_value=request.GET.get('doctor')
     if search_value.isdigit():
-        doctor=Doctor.objects.filter(Q(aadhaar_no=search_value) | Q(phone_number=search_value)).values()[0]
+        doctor=Doctor.objects.filter(Q(aadhaar_no=search_value) | Q(phone_number=search_value)).values(
+            'email_id','first_name','middle_name','last_name','phone_number','specialization','city','image')[0]
     else:
-        doctor=Doctor.objects.filter(Q(email=search_value)).values()[0]
+        doctor=Doctor.objects.filter(Q(email=search_value)).values(
+            'email_id','first_name','middle_name','last_name','phone_number','specialization','city','image')[0]
     return JsonResponse(doctor)
 
+def search_doctor_city_specialization(request):
+    city=request.GET.get('city')
+    specialization=request.GET.get('specialization')
+    if(specialization==' '):
+        doctor=Doctor.objects.filter(Q(city=city)).values(
+            'email_id','first_name','middle_name','last_name','phone_number','specialization','city','image')
+    if(specialization!=' '):
+        doctor=Doctor.objects.filter(Q(city=city) & Q(specialization=specialization)).values(
+            'email_id','first_name','middle_name','last_name','phone_number','specialization','city','image')
+    return JsonResponse(list(doctor),safe=False)
 
 def grant_access(request):
     if request.method == 'POST':
