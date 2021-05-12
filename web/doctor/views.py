@@ -6,7 +6,7 @@ from main.forms import UserRegisterForm
 from doctor.models import Doctor
 from django.contrib.auth import login, logout,authenticate
 from django.contrib.auth.decorators import login_required
-from patient.models import Patient
+from patient.models import Patient,Basic
 from blockchain import blockchain
 from blockchain import contracts
 import datetime
@@ -72,9 +72,12 @@ def view_patients(request):
     doctor_account=blockchain.load_account(doctor['privatekey'])
     doctorInfo=contracts.doctorInfo(doctor_account)
     patients=[]
+    basicinfo=[]
     for i in doctorInfo[1]:
-        patients.append(Patient.objects.filter(address=i).values()[0])
-    return render(request,'doctor/view_patients.html',{'patients':patients})
+        patient=Patient.objects.filter(address=i).values()[0]
+        patients.append(patient)
+        basicinfo.append(Basic.objects.filter(email=patient['email_id']).values()[0])
+    return render(request,'doctor/view_patients.html',{'data':zip(patients,basicinfo)})
         
 @login_required
 @doctor_required
@@ -103,7 +106,8 @@ def show_reports(request):
     for i in range(len(report)):
         report[i]=list(report[i])
         report[i][0]=(datetime.datetime.fromtimestamp(int(report[i][0]), tz.gettz('Asia/Kolkata')).strftime('%d/%m/%Y %I:%M %p'))
-    return render(request,'doctor/patient_reports.html',{'patients':patients,'report':report,'val':val})
+    basicinfo=Basic.objects.filter(email=request.POST['patient']).values()[0]
+    return render(request,'doctor/patient_reports.html',{'patients':patients,'report':report,'val':val,'basicinfo':basicinfo})
 
 @login_required
 @doctor_required

@@ -11,13 +11,14 @@
 
 <br>
 <br>
-
+<div class="row">
+<div class="col-sm-12 col-md-6 col-lg-6">
 <form class="form-inline" method='post' action='{% url "show_reports" %}' enctype="multipart/form-data" id="show_reports">
     {% csrf_token %}
-    <div class="form-group mb-2">
+    <div class="form-group">
         <label for='patient'>Select Patient:</label>
     </div>
-    <div class="form-group mx-sm-3 mb-2">
+    <div class="form-group">
         <select class="form-control " name="patient" id='patient'>
             <option value=""></option>
             {% for i in patients %}
@@ -25,10 +26,25 @@
             {% endfor %}
         </select>
     </div>
-    <input style="margin-top: 0vw;" type="submit" class="btn mb-2" value="Show">
+    <input style="margin-top: 0vw;" type="submit" class="btn" value="Show">
 </form>
 <script>$('#patient').val("{{val}}").prop('selected',true);</script>
-
+</div>
+<div class="col-sm-12 col-md-6 col-lg-6">
+    {% if basicinfo|length > 0 %}
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">Basic Info</h5>
+            <p class="card-text">Height:{{basicinfo.height}}</p>
+            <p class="card-text">Weight:{{basicinfo.weight}}</p>
+            <p class="card-text">Blood Group:{{basicinfo.blood_group}}</p>
+            <p class="card-text">Allergies:{{basicinfo.allergies}}</p>
+            <p class="card-text">Operations:{{basicinfo.operations}}</p>
+        </div>
+    </div>
+    {% endif %}
+</div>
+</div>
 
 <br>
 <br>
