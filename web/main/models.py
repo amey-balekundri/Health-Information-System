@@ -74,7 +74,7 @@ class User(AbstractBaseUser):
 class Contact(models.Model):
     full_name = models.CharField(max_length=50)
     email = models.EmailField()
-    phone_number = models.IntegerField(default=0)
+    phone_number = models.PositiveBigIntegerField()
     message = models.CharField(max_length=300)
 
 	

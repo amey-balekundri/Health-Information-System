@@ -40,6 +40,7 @@ def load_account(key):
 def send_ether(address):
     account=web3.eth.account.privateKeyToAccount(config.main_account_key)
     trxn={
+        'chainId':web3.eth.chainId,
         'nonce':web3.eth.getTransactionCount(account.address),
         'gas':700000,
         'gasPrice':web3.toWei('100','gwei'),
