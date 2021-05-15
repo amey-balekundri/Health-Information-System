@@ -24,13 +24,11 @@ h1{
 
 
 .card {
-  float: left;
 	background: AntiqueWhite;
 	color: black;
   	transition: 0.3s;
   	padding-top: 1vw;
 	opacity: 0.8;
-	text-align: center;
 	border: 2px solid black;
 	border-radius: 26px;
 }
@@ -41,29 +39,12 @@ h1{
 
 @media all and (min-width: 100px) and (max-width: 480px){
 
-.btn{
-    width: 42vw;
-}
 
-.card {
-  float: left;
-  padding-top: 1vw;
-  width: 80vw;
-}
 
 }
 
 @media all and (min-width: 481px) and (max-width:768px){	
 
-.btn{
-    width: 26vw;
-}
-
-.card {
-  float: left;
-  padding-top: 1vw;
-  width: 50vw;
-}
 
 }
 
@@ -73,15 +54,6 @@ h1{
 
 @media all and (min-width: 769px) and (max-width:1024px){
 
-.btn{
-    width: 18vw;
-}
-
-.card {
-  float: left;
-  padding-top: 1vw;
-  width: 30vw;
-}
 
 }
 
@@ -90,20 +62,7 @@ h1{
 
 @media all and (min-width: 1025px) and (max-width: 1275px){
 
-.btn{
-    transition: all .5s ease;
-    border-radius: 30px;
-    color:#008080;
-    font-weight: bold;
-    background-color: AntiqueWhite;
-    border: 1px solid #008080;
-}
 
-.card {
-  float: left;
-  padding-top: 1vw;
-  width: 30vw;
-}
 
 }
 

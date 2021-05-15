@@ -7,8 +7,8 @@ body{
 }
 
 #img{
-   height:200px;
-   width: 200px;
+   height:150px;
+   width: 150px;
 }
 
 h1{
@@ -23,7 +23,6 @@ h1{
     margin: 1vw;
     border: 2px solid #3498db;
     padding: 1vw 1vw;
-    width: 30vw;
     outline: none;
     color: black;
     border-radius: 24px;
@@ -38,7 +37,6 @@ h1{
 
 .btn{
     transition: all .5s ease;
-    width: 13vw;
     border-radius: 30px;
     color:#008080;
     font-weight: bold;
@@ -51,7 +49,6 @@ h1{
 
 .btn1{
     transition: all .5s ease;
-    width: 13vw;
     border-radius: 30px;
     color:#008080;
     font-weight: bold;
@@ -72,16 +69,6 @@ h1{
 	background: OldLace;
 	color: black;
   	transition: 0.3s;
-  	 
-  	padding-top: 1vw;
-
-  	width: 25%;
-  	margin-left: 40vw;
-  	margin-top: -14vw;
-	opacity: 0.8;
-
-	text-align: center;
-
 	border: 2px solid black;
 	border-radius: 26px;
 }
@@ -92,80 +79,12 @@ h1{
 
 @media all and (min-width: 100px) and (max-width: 480px){
 
-#search_value{
-  width: 66vw;
-}
 
-.btn{
-    width: 32vw;
-    
-    margin-top: 1vw;
-    margin-bottom: 1vw;
-    margin-left:1.2vw;
-}
-
-.btn1{
-  
-    width: 34vw;
-  
-    margin-top: 1vw;
-    margin-bottom: 1vw;
-    margin-left:1vw;
-}
-
-  .card {
-  background: OldLace;
-  color: black;
-    transition: 0.3s;
-     
-    padding-top: 1vw;
-    
-    width: 75%;
-    margin-left: 16vw;
-    margin-top: -10vw;
-  opacity: 0.8;
-
-}
 
 }
 
 @media all and (min-width: 481px) and (max-width:768px){	
 
-#search_value{
-  width: 50vw;
-}
-
-.btn{
-    width: 20vw;
-    
-    margin-top: 1vw;
-    margin-bottom: 1vw;
-    margin-left:1.2vw;
-}
-
-	.btn1{
-  
-    width: 30vw;
-  
-    margin-top: 1vw;
-    margin-bottom: 1vw;
-    margin-left:-1vw;
-}
-
-
-	.card {
-	background: OldLace;
-	color: black;
-  	transition: 0.3s;
-  	 
-  	padding-top: 1vw;
-  	
-  	width: 50%;
-  	margin-left: 36vw;
-  	margin-top: -14vw;
-	opacity: 0.8;
-
-}
 
 }
 
@@ -176,29 +95,6 @@ h1{
 @media all and (min-width: 769px) and (max-width:1024px){
 
 
-.btn1{
-  
-    width: 18vw;
-  
-    margin-top: 1vw;
-    margin-bottom: 1vw;
-    margin-left:-0.7vw;
-}
-
-	.card {
-	background: OldLace;
-	color: black;
-  	transition: 0.3s;
-  	 
-  	padding-top: 1vw;
-  	
-  	width: 40%;
-  	margin-left: 32vw;
-  	margin-top: -14vw;
-	opacity: 0.8;
-
-}
-
 }
 
 /* ---  --- */
@@ -206,28 +102,7 @@ h1{
 
 @media all and (min-width: 1025px) and (max-width: 1275px){
 
-.btn1{
-  
-    width: 22vw;
-  
-    margin-top: 1vw;
-    margin-bottom: 1vw;
-    margin-left:-0.7vw;
-}
 
-  .card {
-  background: OldLace;
-  color: black;
-    transition: 0.3s;
-     
-    padding-top: 1vw;
-    
-    width: 40%;
-    margin-left: 40vw;
-    margin-top: -14vw;
-  opacity: 0.8;
-
-}
 
 }
 

@@ -7,24 +7,49 @@
 <h1> Patients Access </h1>
 <br>
 <br>
-    <div class="row justify-content-center">
-    {% for i in patients %}
-    <div class="col-sm-12 col-md-4 col-lg-3">
+<div class="row">
+    {% for patient,basicinfo in data %}
+    <div class="col-sm-12 col-md-6 col-lg-3">
       <div class="card mx-2 my-2">
-        <img class="rounded-circle mx-auto" height="175px" width="175px" src="/media/{{i.image}}" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Name: {{i.first_name}} {{i.middle_name}} {{i.last_name}}</h5>
-          <p class="card-text">Email: {{i.email_id}}</p>
-          <p class="card-text">Phone Number: {{i.phone_number}}</p>
+        <img class="rounded-circle mx-auto" height="150px" width="150px" src="/media/{{patient.image}}" class="card-img-top" alt="...">
+        <div class="card-body mx-auto">
+          <h5 class="card-title">Name: {{patient.first_name}} {{patient.middle_name}} {{patient.last_name}}</h5>
+          <p class="card-text">Email: {{patient.email_id}}</p>
+          <p class="card-text">City:{{patient.city}}</p>
+          <p class="card-text">Phone Number: {{patient.phone_number}}</p>
           <form class="form-inline" method='post' action='{% url "show_reports" %}' enctype="multipart/form-data" id="show_reports">
             {% csrf_token %}
-            <input type="hidden" name="patient" id="patient" value="{{i.email_id}}">
+            <input type="hidden" name="patient" id="patient" value="{{patient.email_id}}">
           <input type="submit" class="btn btn-primary mx-auto" value="View Report">
+          <button type="button" class="btn btn-primary mx-auto" data-toggle="modal" data-target="#{{patient.first_name}}{{patient.middle_name}}{{patient.last_name}}">
+            View BasicInfo
+          </button>
           </form>
         </div>
-      </div><br>
-      </div>  
+      </div>
+
+      <!-- Modal -->
+      <div class="modal fade" id="{{patient.first_name}}{{patient.middle_name}}{{patient.last_name}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">{{patient.first_name}}'s Basic Info</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <p>Height:{{basicinfo.height}}</p>
+              <p>Weight:{{basicinfo.weight}}</p>
+              <p>Blood Group:{{basicinfo.blood_group}}</p>
+              <p>Allergies:{{basicinfo.allergies}}</p>
+              <p>Operations:{{basicinfo.operations}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> 
     {% endfor %}
-    </div>
+</div>
 
 {% endblock content %}
