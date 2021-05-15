@@ -19,7 +19,7 @@
           <p class="card-text">Phone Number: {{patient.phone_number}}</p>
           <form class="form-inline" method='post' action='{% url "show_reports" %}' enctype="multipart/form-data" id="show_reports">
             {% csrf_token %}
-            <input type="hidden" name="patient" id="patient" value="{{i.email_id}}">
+            <input type="hidden" name="patient" id="patient" value="{{patient.email_id}}">
           <input type="submit" class="btn btn-primary mx-auto" value="View Report">
           <button type="button" class="btn btn-primary mx-auto" data-toggle="modal" data-target="#{{patient.first_name}}{{patient.middle_name}}{{patient.last_name}}">
             View BasicInfo

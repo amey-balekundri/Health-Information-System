@@ -49,4 +49,4 @@ class BasicForm(ModelForm):
 
 class Search(forms.Form):
     city = forms.ChoiceField(choices=utils.json_parser("utils/city.json"),required=True)
-    specialization=forms.ChoiceField(choices=utils.json_parser("utils/specialization.json"),required=True)
+    specialization=forms.ChoiceField(choices=utils.json_parser("utils/specialization.json"))
