@@ -12,7 +12,6 @@ h1{
 	font-weight: bold;
 }
 
-
 .column {
   float: left;
   width: 25%;
@@ -47,8 +46,6 @@ h1{
   	margin-left: 0vw;
   	margin-top: 0vw;
 	opacity: 0.8;
-
-	text-align: center;
 
 	border: 2px solid black;
 	border-radius: 26px;
