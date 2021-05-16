@@ -4,7 +4,7 @@
 {%block content %}
     <link href="{% static 'doctor/view_patients.css' %}" rel="stylesheet">
 <br>
-<h1> Patients Access </h1>
+<h1> Patients Profile </h1>
 <br>
 <br>
 <div class="row">
@@ -13,16 +13,16 @@
       <div class="card mx-2 my-2">
         <img class="rounded-circle mx-auto" height="150px" width="150px" src="/media/{{patient.image}}" class="card-img-top" alt="...">
         <div class="card-body mx-auto">
-          <h5 class="card-title">Name: {{patient.first_name}} {{patient.middle_name}} {{patient.last_name}}</h5>
-          <p class="card-text">Email: {{patient.email_id}}</p>
-          <p class="card-text">City:{{patient.city}}</p>
-          <p class="card-text">Phone Number: {{patient.phone_number}}</p>
+          <h5 class="card-title">Name : {{patient.first_name}} {{patient.middle_name}} {{patient.last_name}}</h5>
+          <p class="card-text">Email : {{patient.email_id}}</p>
+          <p class="card-text">City : {{patient.city}}</p>
+          <p class="card-text">Phone Number : {{patient.phone_number}}</p>
           <form class="form-inline" method='post' action='{% url "show_reports" %}' enctype="multipart/form-data" id="show_reports">
             {% csrf_token %}
             <input type="hidden" name="patient" id="patient" value="{{patient.email_id}}">
           <input type="submit" class="btn btn-primary mx-auto" value="View Report">
           <button type="button" class="btn btn-primary mx-auto" data-toggle="modal" data-target="#{{patient.first_name}}{{patient.middle_name}}{{patient.last_name}}">
-            View BasicInfo
+            View Basic Info
           </button>
           </form>
         </div>
@@ -33,17 +33,17 @@
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">{{patient.first_name}}'s Basic Info</h5>
+              <h5 class="modal-title" id="exampleModalLabel">{{patient.first_name}}'s Basic Medical Information</h5>
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
             </div>
             <div class="modal-body">
-              <p>Height:{{basicinfo.height}}</p>
-              <p>Weight:{{basicinfo.weight}}</p>
-              <p>Blood Group:{{basicinfo.blood_group}}</p>
-              <p>Allergies:{{basicinfo.allergies}}</p>
-              <p>Operations:{{basicinfo.operations}}</p>
+              <p>Height : {{basicinfo.height}}</p>
+              <p>Weight : {{basicinfo.weight}}</p>
+              <p>Blood Group : {{basicinfo.blood_group}}</p>
+              <p>Allergies : {{basicinfo.allergies}}</p>
+              <p>Operations : {{basicinfo.operations}}</p>
             </div>
           </div>
         </div>

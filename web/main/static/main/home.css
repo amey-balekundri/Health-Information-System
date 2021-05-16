@@ -18,7 +18,7 @@ a:hover {
 	height: 25vw;
 	margin-left: 60vw;
 
-	margin-top: -21vw;
+	margin-top: 0vw;
 
 	opacity: 0.9;
 
@@ -58,7 +58,7 @@ li{
 }
 
 .container{
-  padding-top: 26vw;
+  padding-top: 4vw;
 }
 
 .counter-box {

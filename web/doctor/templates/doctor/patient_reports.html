@@ -6,7 +6,7 @@
     <link href="{% static 'doctor/patient_reports.css' %}" rel="stylesheet">
 
 <br>
-<h1> Patient Reports </h1>
+<h1> Patients Medical Record </h1>
 
 
 <br>
@@ -15,8 +15,8 @@
 <div class="col-sm-12 col-md-6 col-lg-6">
 <form class="form-inline" method='post' action='{% url "show_reports" %}' enctype="multipart/form-data" id="show_reports">
     {% csrf_token %}
-    <div class="form-group">
-        <label for='patient'>Select Patient:</label>
+    <div class="form-group mr-2">
+        <label for='patient'>Select Patient : </label>
     </div>
     <div class="form-group">
         <select class="form-control " name="patient" id='patient'>
@@ -26,7 +26,7 @@
             {% endfor %}
         </select>
     </div>
-    <input style="margin-top: 0vw;" type="submit" class="btn" value="Show">
+    <input type="submit" class="btn" value="Show">
 </form>
 <script>$('#patient').val("{{val}}").prop('selected',true);</script>
 </div>
@@ -34,12 +34,12 @@
     {% if basicinfo|length > 0 %}
     <div class="card">
         <div class="card-body">
-            <h5 class="card-title">Basic Info</h5>
-            <p class="card-text">Height:{{basicinfo.height}}</p>
-            <p class="card-text">Weight:{{basicinfo.weight}}</p>
-            <p class="card-text">Blood Group:{{basicinfo.blood_group}}</p>
-            <p class="card-text">Allergies:{{basicinfo.allergies}}</p>
-            <p class="card-text">Operations:{{basicinfo.operations}}</p>
+            <u><h5 class="card-title">Basic Medical Information</h5></u>
+            <p class="card-text">Height  : {{basicinfo.height}} cm</p>
+            <p class="card-text">Weight  : {{basicinfo.weight}} kg</p>
+            <p class="card-text">Blood Group : {{basicinfo.blood_group}}</p>
+            <p class="card-text">Any Specific Allergy : {{basicinfo.allergies}}</p>
+            <p class="card-text">Any Minor/Major Operation : {{basicinfo.operations}}</p>
         </div>
     </div>
     {% endif %}
@@ -56,8 +56,8 @@
     <div class="col-sm-12 col-md-4 col-lg-3">
     <div class="card my-2">
 
-    <p>File Name: {{i.1}}</p>
-    <p>Date and Time: {{i.0}}</p>
+    <p>File Name : {{i.1}}</p>
+    <p>Date and Time : {{i.0}}</p>
 
     <a href="https://ipfs.infura.io/ipfs/{{i.2}}" class="btn btn-info mx-auto" target="_blank">View Report</a>
 

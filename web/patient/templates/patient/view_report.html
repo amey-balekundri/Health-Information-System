@@ -5,14 +5,14 @@
     <link href="{% static 'patient/view_report.css' %}" rel="stylesheet">
 <div>
 <br>
-	<h1> My Reports </h1>
+	<h1> My Medical Records </h1>
 	<br>
 	<div class="row">
         {% for i in report reversed %}
         <div class="col-sm-12 col-md-4 col-lg-3 my-2">
             <div class="card">
-                <p>File Name: {{i.1}}</p>
-                <p>Date and Time: {{i.0}}</p>
+                <p>File Name : {{i.1}}</p>
+                <p>Date and Time : {{i.0}}</p>
                 <a href="https://ipfs.infura.io/ipfs/{{i.2}}" class="btn btn-info mx-auto" target="_blank">View Report</a>
             </div>
         </div>

@@ -16,6 +16,7 @@ h1{
     font-weight: bold;
     background-color: AntiqueWhite;
     border: 1px solid #008080;
+    margin: 0.4vw;
 }
 .btn:hover, .btn:focus{
     background-color: #008080;

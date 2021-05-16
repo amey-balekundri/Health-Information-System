@@ -19,6 +19,7 @@ h1{
     background-color: AntiqueWhite;
     border: 1px solid #008080;
     width:10vw;
+    margin-left: 1vw;
 }
 .btn:hover, .btn:focus{
     background-color: #008080;

@@ -13,12 +13,12 @@ $(document).ready(function(){
         dataType:'json',
         success: function(data){
             $('#result').show()
-            $('#name').text('Name:' + data['first_name'] +' '+ data['middle_name']+' '+ data['last_name'])
-            $('#email_id').text('Email Id:' + data['email_id'])
+            $('#name').text('Name : ' + data['first_name'] +' '+ data['middle_name']+' '+ data['last_name'])
+            $('#email_id').text('Email : ' + data['email_id'])
             $('#email_id2').val(data['email_id'])
-            $('#specialization').text('Specialization:'+data['specialization'])
-            $('#city').text('City:'+data['city'])
-            $('#phone_no').text('Phone No:'+data['phone_number'])
+            $('#specialization').text('Specialization : '+data['specialization'])
+            $('#city').text('City : '+data['city'])
+            $('#phone_no').text('Phone No : '+data['phone_number'])
             $('#img').attr('src','/media/'+data["image"])
             $('#not_found').text('')
         },

@@ -28,12 +28,28 @@ h1{
     border-radius: 24px;
     transition: 1.5s;
 }
+#id_city,#id_specialization{
+    border: 0;
+    background: none;
+    display: block;
+    margin-top: 1vw;
+    border: 2px solid #3498db;
+    padding: 1vw 1vw;
+    outline: none;
+    color: black;
+    border-radius: 24px;
+    transition: 1.5s;
+}
 #search_value:focus{
     border-bottom-color: green;
     box-shadow: 0 0 5px rgba(0,80,80,.4); 
     border-radius: 4px;
 }
-
+#id_city:focus,#id_specialization:focus{
+    border-bottom-color: green;
+    box-shadow: 0 0 5px rgba(0,80,80,.4); 
+    border-radius: 4px;
+}
 
 .btn{
     transition: all .5s ease;
@@ -42,9 +58,8 @@ h1{
     font-weight: bold;
     background-color: OldLace;
     border: 1px solid #008080;
-    margin-top: 1vw;
-    margin-bottom: 1vw;
-    margin-left:1.2vw;
+    height: 40px; 
+    width: 170px;
 }
 
 .btn1{
@@ -54,12 +69,24 @@ h1{
     font-weight: bold;
     background-color: OldLace;
     border: 1px solid #008080;
-    margin-top: 1vw;
-    margin-bottom: 1vw;
-    margin-left:0vw;
+    height: 40px; 
+    width: 100px;
 }
 
-.btn:hover, .btn:focus, .btn1:hover, .btn1:focus{
+.btn2{
+    transition: all .5s ease;
+    border-radius: 30px;
+    color:#008080;
+    font-weight: bold;
+    background-color: OldLace;
+    border: 1px solid #008080;
+    height: 40px;
+    width: 100px;
+}
+
+
+
+.btn:hover, .btn:focus,.btn1:hover, .btn1:focus, .btn2:hover, .btn2:focus{
     background-color: #008080;
     color:#fff;
 }

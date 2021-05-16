@@ -62,7 +62,7 @@ small{
 }
 
 
-#id_first_name,#id_middle_name,#id_last_name,#id_phone_number,#id_aadhaar_no,#id_email,#id_password1,#id_password2{
+#id_first_name,#id_middle_name,#id_last_name,#id_phone_number,#id_aadhaar_no,#id_city,#id_specialization,#id_email,#id_password1,#id_password2{
     border: 0;
     background: none;
     display: block;
@@ -73,7 +73,7 @@ small{
     border-radius: 28px;
     transition: 1.5s
 }
-#id_first_name:focus,#id_middle_name:focus,#id_last_name:focus,#id_phone_number:focus,#id_aadhaar_no:focus,#id_email:focus,#id_password1:focus,#id_password2:focus{
+#id_first_name:focus,#id_middle_name:focus,#id_last_name:focus,#id_phone_number:focus,#id_aadhaar_no:focus,#id_city:focus,#id_specialization:focus,#id_email:focus,#id_password1:focus,#id_password2:focus{
     border-bottom-color: green;
     box-shadow: 0 0 5px rgba(0,80,80,.4); 
     border-radius: 4px;

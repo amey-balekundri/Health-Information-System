@@ -15,9 +15,9 @@
 <div class="container-fluid row">
 <div class="col-md-6 ">
     <input id="search_value" class="form-control mb-3" placeholder="type doctor's email/phone no here to search..." /> <br>
-    <input id="search_here" type="submit" class="btn btn-primary" value="Search">
+    <input id="search_here" type="submit" class="btn1 btn-primary ml-3" value="Search">
 </div>
-<div class="col-md-6">
+<div class="col-md-3">
     <div id="result">
       <form method="POST" action="{% url 'grant_access' %}" enctype="multipart/form-data">
           {% csrf_token %}
@@ -30,7 +30,7 @@
               <p id="specialization" class="card-text"></p>
               <p id="city" class="card-text"></p>
               <p id='phone_no' class="card-text"></p>
-              <input type="submit" class="btn1" value="Grant Access">
+              <input type="submit" class="btn" value="Grant Access">
             </div>
           </div>
       </form>
@@ -39,7 +39,7 @@
     <div id='not_found'></div>
 </div>
 
-<div class="container-fluid mt-5">
+<div class="container-fluid mt-5 mx-3 mb-5">
       <div class="row">
         <div class="col-sm-12 col-md-6 col-lg-6">
           {{ search_form.city|as_crispy_field }}
@@ -48,7 +48,7 @@
           {{ search_form.specialization|as_crispy_field }}
         </div>
       </div>
-      <input id="filter" type="submit" class="btn1" value="Search"></input>
+      <input id="filter" type="submit" class="btn2 mt-4" value="Search"></input>
 </div>
 
 <div class="cotainer-fluid">
@@ -60,13 +60,15 @@
           <div class="card mx-2 my-2 p-2">
             <img src="{{doc.image.url}}" class="card-img-top mx-auto" alt="..." id="img"></img>
             <div class="card-body mx-auto">
-              <p class="card-title">Name:{{doc.first_name}} {{doc.middle_name}} {{doc.last_name}}</p>
-              <p class="card-text">Email Id:{{doc.email_id}}</p>
+              <p class="card-title">Name : {{doc.first_name}} {{doc.middle_name}} {{doc.last_name}}</p>
+              <p class="card-text">Email : {{doc.email_id}}</p>
               <input type="hidden" name="email_id" value={{doc.email_id}}>
-              <p class="card-text">Specialization:{{doc.specialization}}</p>
-              <p class="card-text">City:{{doc.city}}</p>
-              <p class="card-text">Phone No:{{doc.phone_number}}</p>
-              <input type="submit" class="btn1" value="Grant Access">
+              <p class="card-text">Specialization : {{doc.specialization}}</p>
+              <p class="card-text">City : {{doc.city}}</p>
+              <p class="card-text">Phone No : {{doc.phone_number}}</p>
+              <div class="text-center">
+              <input type="submit" class="btn" value="Grant Access">
+              </div>
             </div>
           </div>
         </form>
