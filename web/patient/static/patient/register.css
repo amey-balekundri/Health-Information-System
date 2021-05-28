@@ -99,7 +99,7 @@ form{
     opacity: 0.7;
 }
 
-#id_first_name,#id_middle_name,#id_last_name,#id_phone_number,#id_aadhaar_no,#id_email,#id_password1,#id_password2{
+#id_first_name,#id_middle_name,#id_last_name,#id_phone_number,#id_aadhaar_no,#id_city,#id_email,#id_password1,#id_password2{
 
     width: 75vw;
   
