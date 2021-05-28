@@ -3,33 +3,37 @@
 
 {%block content %}
 
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<link href="{% static 'main/home.css' %}" rel="stylesheet">
-	<script src="{% static 'main/home.js' %}"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="{% static 'main/home.css' %}" rel="stylesheet">
+    <script src="{% static 'main/home.js' %}"></script>
+<div class="homepage">
+    <div class="imgbg">
+    <div class="container-fluid" id="heading">
+        <div class="item">Health Information System </div>
+        <div class="item">Using Blockchain Technology </div>
+    </div>
 
-<div class="main">
-	<p class="p1">Health Information System Using Blockchain Technology </p><br><br>
-</div>
-
-<div class="container">
-    <div class="row">
-        <div class="col-md-6">
-            <div class="counter-box colored"> <i class="fa fa-user" aria-hidden="true"></i> <span class="counter">{{totalpatients}}</span>
-                <p>Registered Patients</p>
+    <div class="container-fluid" id="footer">
+        <div class="row">
+            <div class="col-md-3 text-center">
+                <div class="counter-box colored"> 
+                    <i class="fa fa-user" aria-hidden="true"></i> 
+                    <span class="counter">{{totalpatients}}</span>
+                    <p>Registered Patients</p>
+                </div>
             </div>
-        </div>
-        <div class="col-md-6">
-            <div class="counter-box colored"> <i class="fa fa-user-md" aria-hidden="true"> </i> <span class="counter">{{totaldoctors}}</span>
-                <p>Registered Doctors</p>
+            <div class="col-md-3 text-center">
+                <div class="counter-box colored"> 
+                    <i class="fa fa-user-md" aria-hidden="true"></i> 
+                    <span class="counter">{{totaldoctors}}</span>
+                    <p>Registered Doctors</p>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-12">
+                <p style="font-size: 20px;color: white;padding-left: 220px;"> &copy; Copyright XYZ All Rights Reserved </p>
             </div>
         </div>
     </div>
 </div>
-
-<br><br><br>
-
-<p style="text-align: center; font-size: 20px;"> &copy; Copyright XYZ All Rights Reserved </p>
-
-<br><br>
 
 {% endblock content %}

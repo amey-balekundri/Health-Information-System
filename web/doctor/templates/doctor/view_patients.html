@@ -10,7 +10,7 @@
 <div class="row">
     {% for patient,basicinfo in data %}
     <div class="col-sm-12 col-md-6 col-lg-3">
-      <div class="card mx-2 my-2">
+      <div class="card mx-2 my-2 px-3">
         <img class="rounded-circle mx-auto" height="150px" width="150px" src="/media/{{patient.image}}" class="card-img-top" alt="...">
         <div class="card-body mx-auto">
           <h5 class="card-title">Name : {{patient.first_name}} {{patient.middle_name}} {{patient.last_name}}</h5>

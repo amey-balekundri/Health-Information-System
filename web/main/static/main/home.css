@@ -1,94 +1,69 @@
-body{
-	background-color: LightBlue;
+.homepage{
+	height: 100%;
+}
+
+.imgbg{
+	background-image:url('/static/main/imgbg.jpg');
+	background-size:cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+}
+
+
+#heading{
+	height: 100%;
+	font-size: 60px;
+	color: white;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	align-content: center;
+	background-color: rgba(0,0,0,.5) !important;
+}
+
+.item{
+	width: 100%;
+	flex: 100%;
+}
+
+#footer{
+	position: fixed;
+	bottom: 0;
+}
+
+.navbar{
+    background-color: rgba(0,0,0,.0) !important;
 }
 
 a:hover {
 	opacity: 0.7;
   }
 
-.p1{
-	color: black;
-	font-size: 3.0vw;
-	font-weight: bold;
-	margin-top: 3vw;
-	text-align: center;
-}
-
-.image1{
-	height: 25vw;
-	margin-left: 60vw;
-
-	margin-top: 0vw;
-
-	opacity: 0.9;
-
-	border : 2px solid red;
-	border-top-right-radius:20px;
-  border-bottom-right-radius:20px;
-  border-top-left-radius:20px;
-  border-bottom-left-radius:20px;
-}
-
-
-ul{
-	padding-top:1vw;
-	padding-bottom:1vw;
-	background: linear-gradient(to top right, #0000cc 0%, #ccccff 100%);
-	margin-right: 40vw;
-	opacity: 0.8;
-
-	border-top-right-radius:20px;
-  border-bottom-right-radius:20px;
-  border-top-left-radius:20px;
-  border-bottom-left-radius:20px;
-}
-
-li{
-	color: black;
-	font-size: 26px;
-}
-
-.card-body{
-  background: SkyBlue;
-  height: 60vh;
-}
-
-.pr1,.pr2,.pr3,.pr4{
-	font-size: 18px;
-}
-
-.container{
-  padding-top: 4vw;
-}
-
 .counter-box {
     display: block;
-    background: #f6f6f6;
-    padding: 40px 20px 37px;
-    text-align: center;
 }
 
 .counter-box p {
-    margin: 5px 0 0;
-    padding: 0;
-    color: #909090;
     font-size: 18px;
-    font-weight: 500
+    font-weight: 500;
 }
 
 .counter-box i {
     font-size: 70px;
-    margin: 0 0 15px;
-    color: #d2d2d2
 }
 
 .counter {
     display: block;
     font-size: 32px;
     font-weight: 700;
-    color: #666;
     line-height: 28px
 }
+
 
 .counter-box.colored {
     background: transparent;
@@ -97,7 +72,7 @@ li{
 .counter-box.colored p,
 .counter-box.colored i,
 .counter-box.colored .counter {
-    color: black;
+    color: white;
 }
 
 
@@ -109,90 +84,12 @@ li{
 	font-size: 20px;
 }
 
-.image1{
-	display: none;
-}
-
-	ul{
-	padding-top:0vw;
-	padding-bottom:1vw;
-	margin-right: 0vw;
-}
-	li{
-	color: black;
-	font-size: 12px;
-}
-
-.main > ul > br{
-	display: none;
-}
-
-.card-body{
-  background: SkyBlue;
-  height: 50vh;
-}
-
-.card-body > h2{
-	font-size: 18px;
-}
-
-.card-body > br{
-	display: none;
-}
-
-.pr1,.pr2,.pr3,.pr4{
-	font-size: 12px;
-}
-
-.break > br{
-	display: none;
-}
-
 }
 
 @media all and (min-width: 481px) and (max-width:768px){	
 
 .p1{
 	font-size: 24px;
-}
-
-	.image1{
-	margin-top: -42vw;
-}
-
-	ul{
-	padding-top:1vw;
-	padding-bottom:1vw;
-	margin-right: 40vw;
-}
-	li{
-	color: black;
-	font-size: 14px;
-}
-
-.main > ul > br{
-	display: none;
-}
-
-.card-body{
-  background: SkyBlue;
-  height: 58vh;
-}
-
-.card-body > h2{
-	font-size: 18px;
-}
-
-.card-body > br{
-	display: none;
-}
-
-.pr1,.pr2,.pr3,.pr4{
-	font-size: 14px;
-}
-
-.break > br{
-	display: none;
 }
 
 }
@@ -203,44 +100,6 @@ li{
 
 @media all and (min-width: 769px) and (max-width:1024px){
 
-	.image1{
-	margin-top: -35vw;
-}
-
-	ul{
-	padding-top:1vw;
-	padding-bottom:1vw;
-	margin-right: 40vw;
-}
-	li{
-	color: black;
-	font-size: 18px;
-}
-
-.main > ul > br{
-	display: none;
-}
-
-.card-body{
-  background: SkyBlue;
-  height: 44vh;
-}
-
-.card-body > h2{
-	font-size: 18px;
-}
-
-.card-body > br{
-	display: none;
-}
-
-.pr1,.pr2,.pr3,.pr4{
-	font-size: 14px;
-}
-
-.break > br{
-	display: none;
-}
 
 }
 
@@ -248,38 +107,7 @@ li{
 
 
 @media all and (min-width: 1025px) and (max-width: 1275px){
-		.image1{
-	margin-top: -26vw;
-}
 
-	ul{
-	padding-top:1vw;
-	padding-bottom:1vw;
-	margin-right: 42vw;
-}
-	li{
-	color: black;
-	font-size: 16px;
-}
-
-
-
-.card-body{
-  background: SkyBlue;
-  height: 68vh;
-}
-
-.card-body > h2{
-	font-size: 18px;
-}
-
-.card-body > br{
-	display: none;
-}
-
-.pr1,.pr2,.pr3,.pr4{
-	font-size: 14px;
-}
 
 
 }
