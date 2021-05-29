@@ -9,5 +9,5 @@ def upload_file(file):
     return(uploaded_file['Hash'])
 
 def get_url(file_hash):
-    url='ipfs.infura.io/ipfs/'+file_hash
+    url='/ipfs/'+file_hash
     return(url)
