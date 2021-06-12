@@ -1,0 +1,60 @@
+version: '3.7'
+
+services:
+    nginx:
+        build:
+            context: ../
+            dockerfile: ./docker/nginx/Dockerfile
+        ports:
+          - 80:80
+        volumes:
+          - static_volume:/static
+        depends_on:
+          - web
+        restart: "on-failure" 
+
+    web:
+        build: 
+            context: ../
+            dockerfile: ./docker/web/Dockerfile
+        ports: 
+            - 8000:8000
+        command: sh -c "python manage.py makemigrations &&
+                        python manage.py migrate &&
+                        python manage.py collectstatic --noinput &&
+                        gunicorn web.wsgi:application --bind 0.0.0.0:8000"
+        volumes:
+            - static_volume:/app/static
+            - media_volume:/app/media
+        depends_on:
+            - db
+        restart: "on-failure"
+
+    db:
+        image: mysql:5.7
+        ports:
+            - 3306:3306
+        volumes:
+            - ./database:/var/lib/mysql
+        environment:
+            MYSQL_ROOT_PASSWORD: "1234"
+            MYSQL_USER: "admin"
+            MYSQL_PASSWORD: "admin"
+            MYSQL_DATABASE: "project"
+        restart: "on-failure"
+    
+    ipfs:
+        image: ipfs/go-ipfs:latest
+        ports: 
+            - 4001:4001
+            - 5001:5001
+            - 8080:8080
+        volumes: 
+            - ipfs_volume:/data/ipfs
+        restart: "on-failure"
+           
+volumes:
+    database:
+    static_volume:
+    media_volume:
+    ipfs_volume:
